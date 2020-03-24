@@ -1,3 +1,17 @@
-.para {
-    color: red;
+.wrapper {
+    position: relative;
+    top: 100px;
+    left: 45vw;
+    width: 250px;
+    min-height: 200px;
+    border-radius: 4px;
+    box-shadow: 3px 2px 10px;
+    padding: 20px;
+}
+
+.wrapperhr {
+    position: relative;
+    height: 1px;
+    background: linear-gradient(90deg, grey, black, grey) ;
+    border: none;
 }

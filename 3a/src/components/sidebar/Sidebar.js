@@ -3,10 +3,15 @@ import styles from './sidebar.module.css'
 
 class Sidebar extends Component {
 
+    constructor(props){
+        super(props)
+        console.log(props)
+    }
+    
     render() {
         return (
-            <div>
-                <p className={styles.para}>Sidebar component works</p>
+            <div style={{background: this.props.theme.background}} className={styles.sidebar}>
+                <p>Sidebar component</p>
             </div>
         );
     }
