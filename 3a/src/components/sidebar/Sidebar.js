@@ -5,13 +5,12 @@ class Sidebar extends Component {
 
     constructor(props){
         super(props)
-        console.log(props)
     }
     
     render() {
         return (
             <div style={{background: this.props.theme.background}} className={styles.sidebar}>
-                <p>Sidebar component</p>
+                <p style={{ color: this.props.theme.color }}>Sidebar component</p>
             </div>
         );
     }

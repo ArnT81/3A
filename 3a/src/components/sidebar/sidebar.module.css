@@ -1,8 +1,15 @@
 .sidebar {
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 13vh;
+    left: 10vw;
     width: 15vw;
-    height: 100vh;
-    box-shadow: 3px 2px 10px;
+    height: 80vh;
+    display: flex;
+    justify-content: left;
+    border-bottom-left-radius: 6px;
+}
+
+.sidebar>p {
+    margin-left: 20px;
+    margin-top: 60px;
 }

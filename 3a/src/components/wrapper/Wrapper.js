@@ -11,7 +11,7 @@ class Wrapper extends Component {
     render() {
         return (
             <div style={{ background: this.props.theme.background }} className={styles.wrapper}>
-                <p className={styles.para} >Wrapper component</p>
+                <p style={{ color: this.props.theme.color }} >Wrapper component</p>
                 <hr className={styles.wrapperhr} />
                 {this.props.children}
             </div>
