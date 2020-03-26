@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from './components/navbar/Navbar'
 import Sidebar from './components/sidebar/Sidebar'
 import Main from './components/main/Main'
-// import Login from './components/login/Login'
+import Login from './components/login/Login'
 import Wrapper from './components/wrapper/Wrapper'
 import image from './media/oceandawn.jpg'
 import RegisterUser from './components/registerUser/RegisterUser'
@@ -25,6 +25,9 @@ function App() {
       <Main>
         <Wrapper theme={theme}>
           <Settings theme={theme} />
+        </Wrapper>
+        <Wrapper theme={theme}>
+          <Login theme={theme} />
         </Wrapper>
         <Wrapper theme={theme}>
           <RegisterUser theme={theme} />
