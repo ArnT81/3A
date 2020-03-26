@@ -1,7 +1,8 @@
 .wrapper {
     position: relative;
+    float: left;
     top: 150px;
-    left: 45vw;
+    left: 27vw;
     width: 250px;
     min-height: 200px;
     border-radius: 4px;

@@ -1,5 +1,6 @@
 .main {
     position: absolute;
+    display: flex;
     top: 13vh;
     left: 25vw;
     width: 65vw;

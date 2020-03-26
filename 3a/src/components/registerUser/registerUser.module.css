@@ -1,0 +1,11 @@
+.registerUser {
+    position: relative;
+    top: 0vh;
+    left: 15vw;
+}
+
+.input {
+    position: relative;
+    float: right;
+    
+}

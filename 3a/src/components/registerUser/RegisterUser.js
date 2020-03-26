@@ -1,7 +1,7 @@
 import React, { Component, useState } from 'react';
-// import styles from './sidebar.module.css'
 import firebase from '../../firebase'
 // import { Link } from 'react-router-dom'
+import styles from './registerUser.module.css'
 
 
 const RegistertUser = (props) => {
@@ -9,51 +9,46 @@ const RegistertUser = (props) => {
     const [submitted, setSubmitted] = useState('')
     const handleSubmit = '';
 
-
-
-
-    firebase.firestore().collection('Users').add({
-        Name: 'Anders',
-        lastName: 'Sulub'
-    });
-
-
+    /*  firebase.firestore().collection('Users').add({
+           Name: 'Anders',
+           lastName: 'Sulub'
+       }); */
 
     return (
-        <div style={{ background: props.theme.background }} >
-            <p>Register component</p>
+        <div className={styles.registerUser} >
+            <p style={{ color: props.theme.color }}>Register component</p>
             <form name="form" onSubmit={handleSubmit}>
                 <div >
-                    <label htmlFor="firstName">First Name</label>
-                    <input type="text" name="firstName" />
+                    <label htmlFor="firstName" style={{ color: props.theme.color }}>First Name:</label>
+                    <input type="text" name="firstName" className={styles.input} />
                     {submitted &&
                         <div className="help-block">First Name is required</div>
                     }
                 </div>
                 <div className={'form-group' + (submitted && !user.lastName ? ' has-error' : '')}>
-                    <label htmlFor="lastName">Last Name</label>
-                    <input type="text" className="form-control" name="lastName" />
+                    <label htmlFor="lastName" style={{ color: props.theme.color }}>Last Name:</label>
+                    <input type="text" className="form-control" name="lastName" className={styles.input} />
                     {submitted && !user.lastName &&
                         <div className="help-block">Last Name is required</div>
                     }
                 </div>
                 <div className={'form-group' + (submitted && !user.username ? ' has-error' : '')}>
-                    <label htmlFor="username">Username</label>
-                    <input type="text" className="form-control" name="username" />
+                    <label htmlFor="username" style={{ color: props.theme.color }}>Username:</label>
+                    <input type="text" className="form-control" name="username" className={styles.input} />
                     {submitted && !user.username &&
                         <div className="help-block">Username is required</div>
                     }
                 </div>
                 <div className={'form-group' + (submitted && !user.password ? ' has-error' : '')}>
-                    <label htmlFor="password">Password</label>
-                    <input type="password" className="form-control" name="password" />
+                    <label htmlFor="password" style={{ color: props.theme.color }}>Password:</label>
+                    <input type="password" className="form-control" name="password" className={styles.input} />
                     {submitted && !user.password &&
                         <div className="help-block">Password is required</div>
                     }
                 </div>
                 <div className={'form-group' + (submitted && !user.password ? ' has-error' : '')}>
-                    <label htmlFor="password">Confirm Password</label>
-                    <input type="password" className="form-control" name="password" />
+                    <label htmlFor="password" style={{ color: props.theme.color }}>Confirm Password:</label>
+                    <input type="password" className="form-control" name="password" className={styles.input} />
                     {submitted && !user.password &&
                         <div className="help-block">Password is required</div>
                     }

@@ -18,6 +18,7 @@ function App() {
 
   return (
     <div>
+      {/* {<img src={image} alt="ocean at dawn" />} */}
       <Navbar theme={theme} />
       <Sidebar theme={theme} />
       <Main>
@@ -25,11 +26,10 @@ function App() {
           <Login theme={theme} />
         </Wrapper>
       </Main>
-      <img src={image} alt="ocean at dawn" />
-      <RegisterUser theme={theme} />
       <Wrapper theme={theme}>
-        <Login />
+        <RegisterUser theme={theme} />
       </Wrapper>
+      
     </div>
   );
 }
