@@ -17,13 +17,14 @@ function App() {
 
   return (
     <div>
-      <img src={image} alt="ocean at dawn" />
       <Navbar theme={theme} />
       <Sidebar theme={theme} />
-      <Main />
-      <Wrapper theme={theme}>
-        <Login theme={theme} />
-      </Wrapper>
+      <Main>
+        <Wrapper theme={theme}>
+          <Login theme={theme} />
+        </Wrapper>
+      </Main>
+      <img src={image} alt="ocean at dawn" />
     </div>
   );
 }
