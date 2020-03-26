@@ -1,20 +1,22 @@
 import React, { Component } from 'react';
 import styles from './navbar.module.css'
+import { Link } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 
-class Navbar extends Component {
-    render() {
-        return (
-            <div style={{ background: this.props.theme.background }} className={styles.navbar}>
-                <ul>
-                    <li style={{ color: this.props.theme.color }}>Login</li>
-                    <li style={{ color: this.props.theme.color }}>Setting</li>
-                    <li style={{ color: this.props.theme.color }}>Messages</li>
-                    <li style={{ color: this.props.theme.color }}>Search</li>
-                    <li style={{ color: this.props.theme.color }}>Lorem</li>
-                </ul>
-            </div>
-        );
-    }
+const Navbar = (props) => {
+
+    return (
+        <div style={{ background: props.theme.background }} className={styles.navbar}>
+            <Router>
+                <Link to="/login" style={{ color: props.theme.color }}>Login</Link>
+                <Link to="/settings" style={{ color: props.theme.color }}>Setting</Link>
+                <Link to="/message" style={{ color: props.theme.color }}>Messages</Link>
+                <Link to="/search" style={{ color: props.theme.color }}>Search</Link>
+                <Link style={{ color: props.theme.color }}>Lorem</Link>
+            </Router>
+        </div>
+    );
+
 }
 
 export default Navbar;
