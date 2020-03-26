@@ -2,9 +2,10 @@ import React from 'react';
 import Sidebar from './components/sidebar/Sidebar'
 import Login from './components/login/Login'
 import Wrapper from './components/wrapper/Wrapper'
+import RegisterUser from './components/registerUser/RegisterUser'
 
 function App() {
-  
+
   const theme = {
     color: "white",
     background: "linear-gradient(100deg, #007bff 30%, white)",
@@ -16,7 +17,7 @@ function App() {
     <div>
       <h3>3A</h3>
       <Sidebar theme={theme} />
-
+      <RegisterUser theme={theme} />
       <Wrapper theme={theme}>
         <Login />
       </Wrapper>
