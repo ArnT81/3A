@@ -1,19 +1,15 @@
 import React, { Component } from 'react';
-// import styles from './login.module.css'
+import styles from './login.module.css';
+// import firebase from '../../firebase.js ';
 
-class Login extends Component {
 
-    constructor(props) {
-        super(props)
-    }
-
-    render() {
-        return (
-            <div>
-                <p style={{ color: this.props.theme.color }}>Login component works</p>
-            </div>
-        );
-    }
+const Login = (props) => {
+  return (
+    <div>
+      <p style={{ color: props.theme.color }}>Login component works</p>
+    </div>
+  );
 }
+
 
 export default Login;

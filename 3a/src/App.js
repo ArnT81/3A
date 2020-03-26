@@ -5,6 +5,7 @@ import Main from './components/main/Main'
 import Login from './components/login/Login'
 import Wrapper from './components/wrapper/Wrapper'
 import image from './media/oceandawn.jpg'
+import RegisterUser from './components/registerUser/RegisterUser'
 
 function App() {
 
@@ -25,6 +26,10 @@ function App() {
         </Wrapper>
       </Main>
       <img src={image} alt="ocean at dawn" />
+      <RegisterUser theme={theme} />
+      <Wrapper theme={theme}>
+        <Login />
+      </Wrapper>
     </div>
   );
 }
