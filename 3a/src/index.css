@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.form-control {
+  float: right;
+}
+
+.backgroundImg {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}

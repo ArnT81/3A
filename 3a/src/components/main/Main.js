@@ -2,10 +2,15 @@ import React, { Component } from 'react';
 import styles from './main.module.css'
 
 class Main extends Component {
+
+    constructor(props){
+        super(props)
+        console.log('over here ', props)
+    }
     render() {
         return (
             <div className={styles.main}>
-                
+                {this.props.children}
             </div>
         );
     }

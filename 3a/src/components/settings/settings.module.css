@@ -1,0 +1,7 @@
+.settings{
+    background: red;
+}
+
+.settings>p {
+    margin-top: 0;
+}
