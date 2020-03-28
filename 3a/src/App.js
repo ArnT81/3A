@@ -4,7 +4,6 @@ import Navbar from './components/navbar/Navbar'
 import Sidebar from './components/sidebar/Sidebar'
 import Main from './components/main/Main'
 import Login from './components/login/Login'
-import Wrapper from './components/wrapper/Wrapper'
 import image from './media/oceandawn.jpg'
 import RegisterUser from './components/registerUser/RegisterUser'
 import Settings from './components/settings/Settings'
@@ -19,27 +18,22 @@ const App = () => {
   }
 
   return (
-
     <div>
       {<img src={image} alt="ocean at dawn" className="backgroundImg" />}
-      <Navbar theme={theme} />
-      <Sidebar theme={theme} />
       <Router>
-        <Wrapper theme={theme}>
-
-          <Switch>
-            <Wrapper theme={theme}>
-              <Route path="/" exact render={props => <Login theme={theme} {...props} />} />
-              <Route path="/login" render={props => <Login theme={theme} {...props} />} />
-              <Route path="/register" render={props => <RegisterUser theme={theme} {...props} />} />
-              <Route path="/settings" render={props => <Settings theme={theme}{...props} />} />
-            </Wrapper>
-          </Switch>
-
-        </Wrapper >
+        <Navbar theme={theme} />
+        <Sidebar theme={theme} />
+        <Switch>
+          <Main>
+            <Route path="/" exact render={props => <Login theme={theme} {...props} />} />
+            <Route path="/login" render={props => <Login theme={theme} {...props} />} />
+            <Route path="/register" render={props => <RegisterUser theme={theme} {...props} />} />
+            <Route path="/settings" render={props => <Settings theme={theme} {...props} />} />
+          </Main>
+        </Switch>
       </Router>
-    </div>
 
+    </div>
   );
 }
 

@@ -7,13 +7,25 @@ const Navbar = (props) => {
 
     return (
         <div style={{ background: props.theme.background }} className={styles.navbar}>
-            <Router>
-                <Link to="/login" style={{ color: props.theme.color }}>Login</Link>
-                <Link to="/settings" style={{ color: props.theme.color }}>Setting</Link>
-                <Link to="/message" style={{ color: props.theme.color }}>Messages</Link>
-                <Link to="/search" style={{ color: props.theme.color }}>Search</Link>
-                <Link style={{ color: props.theme.color }}>Lorem</Link>
-            </Router>
+            <nav>
+                <ul>
+                    <li>
+                        <Link to="/login" style={{ color: props.theme.color }}>Login</Link>
+                    </li>
+                    <li>
+                        <Link to="/settings" style={{ color: props.theme.color }}>Setting</Link>
+                    </li>
+                    <li>
+                        <Link to="/message" style={{ color: props.theme.color }}>Messages</Link>
+                    </li>
+                    <li>
+                        <Link to="/search" style={{ color: props.theme.color }}>Search</Link>
+                    </li>
+                    <li>
+                        <Link style={{ color: props.theme.color }}>Lorem</Link>
+                    </li>
+                </ul>
+            </nav>
         </div>
     );
 
