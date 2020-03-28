@@ -8,17 +8,17 @@
     border-top-right-radius: 6px;
 }
 
-.navbar>ul {
+.navbar>nav>ul {
     margin-left: 13vw;
     text-align: left;
     display: inline-flex;
     list-style: none;
 }
 
-.navbar>ul>li {
+.navbar>nav>ul>li {
     margin: 10px;
 }
 
-.navbar>ul>li:hover {
+.navbar>nav>ul>li:hover {
     text-shadow: 1px 1px 5px white;
 }

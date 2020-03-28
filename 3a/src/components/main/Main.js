@@ -1,19 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styles from './main.module.css'
 
-class Main extends Component {
+const Main = (props) => {
 
-    constructor(props){
-        super(props)
-        console.log('over here ', props)
-    }
-    render() {
-        return (
-            <div className={styles.main}>
-                {this.props.children}
-            </div>
-        );
-    }
+    return (
+        <div className={styles.main}>
+            {props.children}
+        </div>
+    );
 }
 
 export default Main;

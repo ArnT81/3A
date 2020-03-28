@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styles from './navbar.module.css'
 import { Link } from 'react-router-dom'
-import { BrowserRouter as Router } from 'react-router-dom'
 
 const Navbar = (props) => {
 
@@ -16,7 +15,7 @@ const Navbar = (props) => {
                         <Link to="/settings" style={{ color: props.theme.color }}>Setting</Link>
                     </li>
                     <li>
-                        <Link to="/message" style={{ color: props.theme.color }}>Messages</Link>
+                        <Link to="/register" style={{ color: props.theme.color }}>Register</Link>
                     </li>
                     <li>
                         <Link to="/search" style={{ color: props.theme.color }}>Search</Link>
