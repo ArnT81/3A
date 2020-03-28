@@ -1,6 +1,5 @@
 .wrapper {
     position: relative;
-    float: left;
     width: auto;
     max-height: 312px;
     border-radius: 4px;
@@ -8,12 +7,4 @@
     padding: 20px;
     margin-top: 10px;
     margin-left: 10px;
-}
-
-.wrapperhr {
-    position: relative;
-    height: 1px;
-    background: linear-gradient(90deg, grey, black, grey) ;
-    border: none;
-    margin-bottom: 0;
 }

@@ -9,7 +9,6 @@
 
 .registerUser input {
     position: relative;
-    float: right;
 }
 
 form>div>button {
@@ -19,5 +18,4 @@ form>div>button {
     color: white;
     border-radius: 4px;
     margin-top: 10px;
-
 }

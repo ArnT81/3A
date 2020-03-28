@@ -1,7 +1,9 @@
 .login {
-
+    width: 147px;
+    text-align: left;
 }
 
-.login>div>input {
-    float: left;
+.login>h3 {
+    width: 140px;
+    text-align: center;
 }
