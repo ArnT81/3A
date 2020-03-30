@@ -15,41 +15,25 @@ const RegistertUser = (props) => {
            lastName: 'Sulub'
        }); */
 
+    const handleRegister = (e) => {
+        console.log('clicked')
+        e.preventDefault()
+    }
+
     return (
         <Wrapper>
             <div className={styles.registerUser}>
                 <h3 style={{ color: props.theme.color }}>Register new user</h3>
-                <form name="form" onSubmit={handleSubmit}>
-                    <div className={'form-group' + (submitted && !user.firstName ? ' has-error' : '')}>
-                        <label htmlFor="firstName" style={{ color: props.theme.color }}>First Name:</label>
-                        <input type="text" name="firstName" />
-                        {submitted &&
-                            <div className="help-block">First Name is required</div>
-                        }
-                    </div>
-                    <div className={'form-group' + (submitted && !user.lastName ? ' has-error' : '')}>
-                        <label htmlFor="lastName" style={{ color: props.theme.color }}>Last Name:</label>
-                        <input type="text" name="lastName" />
-                        {submitted && !user.lastName &&
-                            <div className="help-block">Last Name is required</div>
-                        }
-                    </div>
-                    <div className={'form-group' + (submitted && !user.username ? ' has-error' : '')}>
-                        <label htmlFor="username" style={{ color: props.theme.color }}>Username:</label>
-                        <input type="text" name="username" />
-                        {submitted && !user.username &&
-                            <div className="help-block">Username is required</div>
+                <form name="form" onSubmit={handleRegister}>
+                    <div className={'form-group' + (submitted && !user.email ? ' has-error' : '')}>
+                        <label htmlFor="email" style={{ color: props.theme.color }}>email:</label>
+                        <input type="text" name="email" />
+                        {submitted && !user.email &&
+                            <div className="help-block">email is required</div>
                         }
                     </div>
                     <div className={'form-group' + (submitted && !user.password ? ' has-error' : '')}>
                         <label htmlFor="password" style={{ color: props.theme.color }}>Password:</label>
-                        <input type="password" name="password" />
-                        {submitted && !user.password &&
-                            <div className="help-block">Password is required</div>
-                        }
-                    </div>
-                    <div className={'form-group' + (submitted && !user.password ? ' has-error' : '')}>
-                        <label htmlFor="password" style={{ color: props.theme.color }}>Confirm Password:</label>
                         <input type="password" name="password" />
                         {submitted && !user.password &&
                             <div className="help-block">Password is required</div>
