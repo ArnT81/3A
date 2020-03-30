@@ -4,7 +4,7 @@ import Navbar from './components/navbar/Navbar'
 import Sidebar from './components/sidebar/Sidebar'
 import Main from './components/main/Main'
 import Login from './components/login/Login'
-import image from './media/snowymountain.jpg'
+import image from './media/oceandawn.jpg'
 import RegisterUser from './components/registerUser/RegisterUser'
 import Settings from './components/settings/Settings'
 
@@ -21,7 +21,6 @@ const App = () => {
 
   const login = () => {
     newState(true)
-    console.log('works MTF')
   }
 
   if (!user) {
@@ -35,19 +34,19 @@ const App = () => {
   }
   return (
     <div>
+      {<img src={image} alt="ocean at dawn" />}
       <Router>
         <Navbar theme={theme} />
         <Sidebar theme={theme} />
         <Switch>
           <Main>
             <Route path="/" exact render={props => <Login theme={theme} {...props} />} />
-            <Route path="/login" render={props => <Login theme={theme} login={login} {...props} onClick={login} />} />
+            <Route path="/login" render={props => <Login theme={theme} {...props} />} />
             <Route path="/register" render={props => <RegisterUser theme={theme} {...props} />} />
             <Route path="/settings" render={props => <Settings theme={theme} {...props} />} />
           </Main>
         </Switch>
       </Router>
-      {<img src={image} alt="ocean at dawn" className="backgroundImg" />}
     </div>
   );
 }

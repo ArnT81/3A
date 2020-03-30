@@ -25,10 +25,10 @@ const Login = (props) => {
               <input type="password" placeholder="Password" />
               <small id="emailHelp" className="form-text text-muted">We'll never share your email and password with anyone else.</small>
             </div>
-            <div>
-              <p style={{ color: props.theme.color }}>Not a member yet</p>
-            </div>
             <button>login</button>
+            <div>
+              <p style={{ color: props.theme.color }}>Not a member yet? Create your account</p>
+            </div>
           </form>
         </div>
       </Wrapper>
