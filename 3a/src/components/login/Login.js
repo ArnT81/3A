@@ -3,11 +3,11 @@ import Wrapper from '../wrapper/Wrapper'
 import styles from './login.module.css';
 // import firebase from '../../firebase.js ';
 const Login = (props) => {
-  console.log(props)
+  
 
   const Login = (e) => {
-    console.log('clicked ', 'Login')
     e.preventDefault()
+    props.newState(true)
   }
 
   return (

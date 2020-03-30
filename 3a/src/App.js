@@ -19,16 +19,11 @@ const App = () => {
     fontSize: "20px"
   }
 
-  const login = () => {
-    newState(true)
-  }
-
   if (!user) {
     return (
       <div>
-        <Login theme={theme} />
+        <Login theme={theme} newState={newState} />
         {<img src={image} alt="ocean at dawn" className="backgroundImg" />}
-        <button onClick={() => login()}>Change State</button>
       </div>
     )
   }
