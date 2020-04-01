@@ -8,6 +8,7 @@ import Wrapper from './components/wrapper/Wrapper'
 import image from './media/oceandawn.jpg'
 import RegisterUser from './components/registerUser/RegisterUser'
 import Settings from './components/settings/Settings'
+import Contacts from '../src/components/Contacts/Contacts'
 
 const App = () => {
 
@@ -22,10 +23,17 @@ const App = () => {
 
     <div>
       {<img src={image} alt="ocean at dawn" className="backgroundImg" />}
-      <Navbar theme={theme} />
-      <Sidebar theme={theme} />
+
+
+
+
+
       <Router>
-        <Wrapper theme={theme}>
+        <Navbar theme={theme} />
+        <Sidebar theme={theme}> <Contacts /></Sidebar>
+
+        <Main>
+
 
           <Switch>
             <Wrapper theme={theme}>
@@ -36,8 +44,9 @@ const App = () => {
             </Wrapper>
           </Switch>
 
-        </Wrapper >
+        </Main>
       </Router>
+
     </div>
 
   );

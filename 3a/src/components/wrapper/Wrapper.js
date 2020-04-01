@@ -12,7 +12,7 @@ class Wrapper extends Component {
         return (
             <div className={styles.wrapper}>
                 {this.props.children}
-                <hr className={styles.wrapperhr} />
+                <hr className={styles.wrapper} />
             </div>
         );
     }

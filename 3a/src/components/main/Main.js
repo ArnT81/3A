@@ -3,9 +3,9 @@ import styles from './main.module.css'
 
 class Main extends Component {
 
-    constructor(props){
+    constructor(props) {
         super(props)
-        console.log('over here ', props)
+
     }
     render() {
         return (

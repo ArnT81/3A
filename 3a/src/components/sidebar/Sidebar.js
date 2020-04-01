@@ -6,6 +6,7 @@ const Sidebar = (props) => {
     return (
         <div style={{ background: props.theme.background }} className={styles.sidebar}>
             <p style={{ color: props.theme.color }}>Sidebar component</p>
+            {props.children}
         </div>
     );
 }
