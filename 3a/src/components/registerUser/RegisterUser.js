@@ -22,33 +22,34 @@ const RegistertUser = (props) => {
     }
 
     return (
-        <div className={styles.registerUser}>
-            <p style={{ color: props.theme.color }}>Register new user</p>
-            <form name="form" onSubmit={register}>
+        <Wrapper>
+            <div className={styles.registerUser}>
+                <p style={{ color: props.theme.color }}>Register new user</p>
+                <form name="form" onSubmit={register}>
+                    <div >
+                        <label htmlFor="firstname" style={{ color: props.theme.color }}>First Name:</label>
+                        <input type="text" name="firstname" />
 
-                <div >
-                    <label htmlFor="firstname" style={{ color: props.theme.color }}>First Name:</label>
-                    <input type="text" name="firstname" />
-
-                </div>
-                <div>
-                    <label htmlFor="lastname" style={{ color: props.theme.color }}>Last Name:</label>
-                    <input type="text" name="lastname" />
-                </div>
-                <div>
-                    <label htmlFor="username" style={{ color: props.theme.color }}>Username:</label>
-                    <input type="text" name="username" />
-                </div>
-                <div>
-                    <label htmlFor="password" style={{ color: props.theme.color }}>Password:</label>
-                    <input type="password" name="password" />
-                </div>
-                <div >
-                    <button type="submit" >Register</button>
-                    <button ><Link to="/login" >Cancel</Link></button>
-                </div>
-            </form>
-        </div >
+                    </div>
+                    <div>
+                        <label htmlFor="lastname" style={{ color: props.theme.color }}>Last Name:</label>
+                        <input type="text" name="lastname" />
+                    </div>
+                    <div>
+                        <label htmlFor="username" style={{ color: props.theme.color }}>Username:</label>
+                        <input type="text" name="username" />
+                    </div>
+                    <div>
+                        <label htmlFor="password" style={{ color: props.theme.color }}>Password:</label>
+                        <input type="password" name="password" />
+                    </div>
+                    <div >
+                        <button type="submit" >Register</button>
+                        <button ><Link to="/login" >Cancel</Link></button>
+                    </div>
+                </form>
+            </div >
+        </Wrapper>
     )
 }
 
