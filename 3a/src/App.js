@@ -7,6 +7,7 @@ import Login from './components/login/Login'
 import image from './media/oceandawn.jpg'
 import RegisterUser from './components/registerUser/RegisterUser'
 import Settings from './components/settings/Settings'
+import Contacts from '../src/components/Contacts/Contacts'
 
 const App = () => {
 
@@ -32,15 +33,17 @@ const App = () => {
       {<img src={image} alt="ocean at dawn" />}
       <Router>
         <Navbar theme={theme} />
-        <Sidebar theme={theme} />
-        <Switch>
-          <Main>
+        <Sidebar theme={theme}>
+          <Contacts />
+        </Sidebar>
+        <Main>
+          <Switch>
             <Route path="/" exact render={props => <Login theme={theme} {...props} />} />
             <Route path="/login" render={props => <Login theme={theme} {...props} />} />
             <Route path="/register" render={props => <RegisterUser theme={theme} {...props} />} />
             <Route path="/settings" render={props => <Settings theme={theme} {...props} />} />
-          </Main>
-        </Switch>
+          </Switch>
+        </Main>
       </Router>
     </div>
   );

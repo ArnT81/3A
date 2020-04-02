@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react';
 import styles from './navbar.module.css'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+
+
 
 const Navbar = (props) => {
 
@@ -9,19 +11,19 @@ const Navbar = (props) => {
             <nav>
                 <ul>
                     <li>
-                        <Link to="/login" style={{ color: props.theme.color }}>Login</Link>
+                        <NavLink to="/login" style={{ color: props.theme.color }}>Login</NavLink>
                     </li>
                     <li>
-                        <Link to="/settings" style={{ color: props.theme.color }}>Setting</Link>
+                        <NavLink to="/settings" style={{ color: props.theme.color }}>Setting</NavLink>
                     </li>
                     <li>
-                        <Link to="/register" style={{ color: props.theme.color }}>Register</Link>
+                        <NavLink to="/register" style={{ color: props.theme.color }}>Register</NavLink>
                     </li>
                     <li>
-                        <Link to="/search" style={{ color: props.theme.color }}>Search</Link>
+                        <NavLink to="/search" style={{ color: props.theme.color }}>Search</NavLink>
                     </li>
                     <li>
-                        <Link style={{ color: props.theme.color }}>Lorem</Link>
+                        <NavLink style={{ color: props.theme.color }}>Lorem</NavLink>
                     </li>
                 </ul>
             </nav>

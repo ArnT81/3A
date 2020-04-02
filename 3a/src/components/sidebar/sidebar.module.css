@@ -4,7 +4,7 @@
     left: 10vw;
     width: 15vw;
     height: 80vh;
-    display: flex;
+    display: block;
     justify-content: left;
     border-bottom-left-radius: 6px;
 }
