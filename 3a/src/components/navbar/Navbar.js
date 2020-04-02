@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import styles from './navbar.module.css'
 import { Link } from 'react-router-dom'
 
@@ -25,9 +25,11 @@ const Navbar = (props) => {
                     </li>
                 </ul>
             </nav>
+            <div>
+                <img src={localStorage.picture} width="70px" height="70px" className={styles.profilePicture} />
+            </div>
         </div>
     );
-
 }
 
 export default Navbar;

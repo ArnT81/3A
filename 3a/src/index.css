@@ -32,7 +32,7 @@ h3 {
 
 input {
   width: 97.8%;
-  height: 24px;
+  height: 26px;
   border-radius: 4px;
   border:none;
 }
@@ -43,11 +43,12 @@ input:focus {
 }
 
 button {
-  width: 100%;
+  width: 99%;
   height: 35px;
   background: round;
   color: white;
   border-radius: 4px;
   margin-top: 10px;
   font-size: medium;
+  box-shadow: 2px 2px 3px black;
 }

@@ -1,9 +1,11 @@
 .navbar {
+    display: flex;
     position: absolute;
     top: 5vh;
     left: 10vw;
     width: 80vw;
     height: 8vh;
+    align-items: center;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
 }
@@ -21,4 +23,14 @@
 
 .navbar>nav>ul>li:hover {
     text-shadow: 1px 1px 5px white;
+}
+
+.profilePicture {
+    position: absolute;
+    bottom: 20px;
+    right: 35px;
+    width: 32px;
+    height: 32px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 5px black, 0px 0px 30px rgb(84, 87, 255);
 }
