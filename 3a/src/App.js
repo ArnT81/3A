@@ -1,51 +1,65 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Navbar from './components/navbar/Navbar'
-import Sidebar from './components/sidebar/Sidebar'
-import Main from './components/main/Main'
-import Login from './components/login/Login'
-import image from './media/oceandawn.jpg'
-import RegisterUser from './components/registerUser/RegisterUser'
-import Settings from './components/settings/Settings'
-import Contacts from '../src/components/Contacts/Contacts'
+import { ThemeContext } from './components/themeContext/ThemeContext';
+import Navbar from './components/navbar/Navbar';
+import Sidebar from './components/sidebar/Sidebar';
+import Main from './components/main/Main';
+import Login from './components/login/Login';
+import RegisterUser from './components/registerUser/RegisterUser';
+import Settings from './components/settings/Settings';
+import Contacts from '../src/components/Contacts/Contacts';
+import image from './media/oceandawn.jpg';
 
 const App = () => {
+  const [user, setUser] = useState(false)
+  const [profilePicture, setProfilePicture] = useState(localStorage.profilePicture)
+  const [theme, setTheme] = useState('rgba(0,0,0,0.8)')
+  const [color, setColor] = useState('white')
 
-  const [user, newState] = useState(false)
+  const store = {
+    user: { get: user, set: setUser },
+    profilePicture: { get: profilePicture, set: setProfilePicture },
+    theme: { get: theme, set: setTheme },
+    color: { get: color, set: setColor }
+  }
 
-  const theme = {
+  /* const theme = {
     color: "white",
     background: "rgba(0,0,0,0.8)",
     fontFamily: "Arial",
     fontSize: "20px"
-  }
+  } */
 
-  if (!user) {
-    return (
-      <div>
-        <Login theme={theme} newState={newState} />
-        {<img src={image} alt="ocean at dawn" className="backgroundImg" />}
-      </div>
-    )
-  }
+  /*  if (!user) {
+     return (
+       <ThemeContext.Provider>
+         <div>
+           <Login setUser={setUser} />
+           {<img src={image} alt="ocean at dawn" className="backgroundImg" />}
+         </div>
+       </ThemeContext.Provider>
+     )
+   } */
   return (
-    <div>
-      {<img src={image} alt="ocean at dawn" />}
-      <Router>
-        <Navbar theme={theme} />
-        <Sidebar theme={theme}>
-          <Contacts />
-        </Sidebar>
-        <Main>
-          <Switch>
-            <Route path="/" exact render={props => <Login theme={theme} {...props} />} />
-            <Route path="/login" render={props => <Login theme={theme} {...props} />} />
-            <Route path="/register" render={props => <RegisterUser theme={theme} {...props} />} />
-            <Route path="/settings" render={props => <Settings theme={theme} {...props} />} />
-          </Switch>
-        </Main>
-      </Router>
-    </div>
+    <ThemeContext.Provider value={store}>
+      <div>
+        {<img src={image} alt="ocean at dawn" />}
+        <Router>
+          <Navbar />
+          <Sidebar>
+            <Contacts />
+          </Sidebar>
+          <Main>
+            <Switch>
+              <Route path="/" exact render={props => <Login {...props} />} />
+              <Route path="/login" render={props => <Login {...props} />} />
+              <Route path="/register" render={props => <RegisterUser {...props} />} />
+              <Route path="/settings" render={props => <Settings {...props} />} />
+            </Switch>
+          </Main>
+        </Router>
+      </div>
+    </ThemeContext.Provider>
   );
 }
 

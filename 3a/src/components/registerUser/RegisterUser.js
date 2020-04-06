@@ -1,14 +1,14 @@
-import React, { useState, useEffect, } from 'react';
+import React, { useContext } from 'react';
+import { ThemeContext } from '../themeContext/ThemeContext'
 import { firebase, auth, db } from '../../firebase'
 import Wrapper from '../wrapper/Wrapper'
 import { Link } from 'react-router-dom'
 import styles from './registerUser.module.css'
 
 const RegistertUser = (props) => {
+    const store = useContext(ThemeContext);
 
-    console.log()
     const register = (user) => {
-
         user.preventDefault();
 
         // auth.createUserWithEmailAndPassword(email, password)
@@ -23,24 +23,24 @@ const RegistertUser = (props) => {
 
     return (
         <Wrapper>
-            <div className={styles.registerUser}>
-                <p style={{ color: props.theme.color }}>Register new user</p>
+            <div className={styles.registerUser} style={{ background: store.theme.get, color: store.color.get }}>
+                <p>Register new user</p>
                 <form name="form" onSubmit={register}>
                     <div >
-                        <label htmlFor="firstname" style={{ color: props.theme.color }}>First Name:</label>
+                        <label htmlFor="firstname">First Name:</label>
                         <input type="text" name="firstname" />
 
                     </div>
                     <div>
-                        <label htmlFor="lastname" style={{ color: props.theme.color }}>Last Name:</label>
+                        <label htmlFor="lastname">Last Name:</label>
                         <input type="text" name="lastname" />
                     </div>
                     <div>
-                        <label htmlFor="username" style={{ color: props.theme.color }}>Username:</label>
+                        <label htmlFor="username">Username:</label>
                         <input type="text" name="username" />
                     </div>
                     <div>
-                        <label htmlFor="password" style={{ color: props.theme.color }}>Password:</label>
+                        <label htmlFor="password">Password:</label>
                         <input type="password" name="password" />
                     </div>
                     <div >

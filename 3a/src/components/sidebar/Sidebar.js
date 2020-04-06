@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styles from './sidebar.module.css'
+import { ThemeContext } from '../themeContext/ThemeContext';
 
 const Sidebar = (props) => {
+    const store = useContext(ThemeContext)
 
     return (
-        <div style={{ background: props.theme.background }} className={styles.sidebar}>
-            <p style={{ color: props.theme.color }}>Sidebar component</p>
+        <div className={styles.sidebar} style={{ background: store.theme.get }}>
             {props.children}
         </div>
     );

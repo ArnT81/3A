@@ -1,15 +1,16 @@
-import React, { Component } from 'react';
+import React, { useContext } from 'react';
+import { ThemeContext } from '../themeContext/ThemeContext';
 import Wrapper from '../wrapper/Wrapper';
+import InputColor from 'react-input-color';
 import styles from './settings.module.css';
 
-class Settings extends Component {
 
-  constructor(props) {
-    super(props)
-    this.state = { picture: null }
-  }
+const Settings = () => {
+  const store = useContext(ThemeContext);
+  const [color, setColor] = React.useState({});////
+  console.log(store)
 
-  getBase64 = (file) => {
+  const getBase64 = (file) => {
     return new Promise((resolve, reject) => {
       const reader = new FileReader();
       reader.onload = () => resolve(reader.result);
@@ -18,43 +19,54 @@ class Settings extends Component {
     });
   }
 
-  imageUpload = (e) => {
+  const imageUpload = (e) => {
     const file = e.target.files[0];
-    this.getBase64(file).then(base64 => {
-      localStorage["picture"] = base64
-      this.setState({ picture: localStorage.picture })
+    getBase64(file).then(base64 => {
+      localStorage["profilePicture"] = base64
+      store.profilePicture.set({ profilePicture: localStorage.profilePicture })
     });
   };
 
-  render() {
-    return (
-      <Wrapper>
-        <div className={styles.settings}>
-          <div className={styles.pictureFrame}>
-          <p style={{textAlign: 'center' }}>Ladda upp profilbild</p>
-            <img src={localStorage.picture} width="100px" height="100px"></img>
-            
-            <input
-              type="file"
-              id="profilePicture"
-              name='profilePicture'
-              onChange={this.imageUpload} />
-          </div>
+  const handleClick = () => {
+    store.theme.set(color.rgba);
+  } //////
 
-                Change picture
+  return (
+    <Wrapper>
+      <div className={styles.settings} style={{ color: store.color.get }}>
+        <div className={styles.pictureFrame}>
+          <p style={{ textAlign: 'center' }}>Change profile picture</p><br />
+          <img src={localStorage.profilePicture} ></img><br />
+
+          <input
+            type="file"
+            id="profilePicture"
+            name='profilePicture'
+            onChange={imageUpload} />
+        </div>
+        <div className={styles.colorFrame}>
+          <p>Change theme color</p>
+          <InputColor
+            initialValue="#5e72e4"
+            onChange={setColor}
+            placement="top"
+          />
+          <button onClick={handleClick}>Change Theme</button>
+        </div>
+
                 Change username
                 Change Password
 
         </div>
-        <div className={styles.settings}>
-          <h3 style={{ color: this.props.theme.color }}>Change themes</h3>
-          <button style={{ color: this.props.theme.color }}>Themes</button>
-          <button style={{ color: this.props.theme.color }}>Fontsize</button>
-          <button style={{ color: this.props.theme.color }}>Background image</button>
-        </div>
-      </Wrapper>
-    );
+      <div className={styles.settings} style={{ color: store.color.get }}>
+        <h3>Change themes</h3>
+        <button>Fontsize</button>
+        <button>Background image</button>
+      </div>
+    </Wrapper>
+  );
 
-  }
 }
+
+
 export default Settings;
