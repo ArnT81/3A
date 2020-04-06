@@ -10,8 +10,6 @@ const RegistertUser = (props) => {
 
     const register = (user) => {
         user.preventDefault();
-
-        // auth.createUserWithEmailAndPassword(email, password)
         db.collection('Users').add({
             firstname: user.target.firstname.value,
             lastname: user.target.lastname.value,
