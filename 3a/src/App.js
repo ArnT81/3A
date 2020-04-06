@@ -9,6 +9,7 @@ import RegisterUser from './components/registerUser/RegisterUser';
 import Settings from './components/settings/Settings';
 import Contacts from '../src/components/Contacts/Contacts';
 import image from './media/oceandawn.jpg';
+import Message from './components/ChatAppliaction/Chat'
 
 const App = () => {
   const [user, setUser] = useState(false)
@@ -55,6 +56,7 @@ const App = () => {
               <Route path="/login" render={props => <Login {...props} />} />
               <Route path="/register" render={props => <RegisterUser {...props} />} />
               <Route path="/settings" render={props => <Settings {...props} />} />
+              <Route path="/message" render={props => <Message {...props} />} />
             </Switch>
           </Main>
         </Router>

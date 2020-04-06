@@ -16,6 +16,9 @@ const Navbar = (props) => {
                         <Link to="/login" style={{color: store.color.get}}>Login</Link>
                     </li>
                     <li>
+                        <Link to="/message" style={{color: store.color.get}}>Message</Link>
+                    </li>
+                    <li>
                         <Link to="/settings" style={{color: store.color.get}}>Setting</Link>
                     </li>
                     <li>
