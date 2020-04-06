@@ -3,10 +3,7 @@ import styles from './main.module.css'
 
 class Main extends Component {
 
-    constructor(props) {
-        super(props)
 
-    }
     render() {
         return (
             <div className={styles.main}>

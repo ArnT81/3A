@@ -6,23 +6,16 @@ import styles from './registerUser.module.css'
 
 const RegistertUser = (props) => {
 
-
-    console.log()
     const register = (user) => {
-
         user.preventDefault();
-
-        // auth.createUserWithEmailAndPassword(email, password)
         db.collection('Users').add({
             firstname: user.target.firstname.value,
             lastname: user.target.lastname.value,
             username: user.target.username.value,
             password: user.target.password.value,
         });
-        console.log(user.target)
-
-
     }
+
     return (
         <div className={styles.registerUser}>
             <p style={{ color: props.theme.color }}>Register new user</p>
@@ -31,7 +24,6 @@ const RegistertUser = (props) => {
                 <div >
                     <label htmlFor="firstname" style={{ color: props.theme.color }}>First Name:</label>
                     <input type="text" name="firstname" />
-
                 </div>
                 <div>
                     <label htmlFor="lastname" style={{ color: props.theme.color }}>Last Name:</label>
