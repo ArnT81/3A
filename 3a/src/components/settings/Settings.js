@@ -47,7 +47,7 @@ const Settings = () => {
         <div className={styles.colorFrame}>
           <p>Change theme color</p>
           <InputColor
-            initialValue="#5e72e4"
+            initialValue="#5e72e4CC"
             onChange={setColor}
             placement="top"
           />
