@@ -35,7 +35,30 @@
     align-items: center;
 }
 
+.fontFrame {
+    margin-top: 10px;
+    color: white;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 4px;
+    align-items: center;
+}
+
 .colorFrame>p {
     margin: 0;
     margin-bottom: 10px;
+}
+
+.smallButton {
+    width: 20%;
+    margin-right: 7px;
+}
+
+.mediumButton {
+    width: 30%;
+    margin-right: 7px;
+}
+
+.largeButton {
+    width: 43%;
 }

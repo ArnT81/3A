@@ -7,7 +7,7 @@ import styles from './settings.module.css';
 
 const Settings = () => {
   const store = useContext(ThemeContext);
-  const [color, setColor] = React.useState({});////
+  const [color, setColor] = React.useState({});
   console.log(store)
 
   const getBase64 = (file) => {
@@ -27,17 +27,32 @@ const Settings = () => {
     });
   };
 
-  const handleClick = () => {
+  const handleTheme = () => {
     store.theme.set(color.rgba);
-  } //////
+  }
+
+  const handleSmallFont = (e) => {
+    e.preventDefault()
+    store.fontSize.set('small')
+  }
+
+  const handleMediumFont = (e) => {
+    e.preventDefault()
+    store.fontSize.set('medium')
+  }
+
+  const handleBigFont = (e) => {
+    e.preventDefault()
+    store.fontSize.set('larger')
+  }
 
   return (
     <Wrapper>
-      <div className={styles.settings} style={{ color: store.color.get }}>
+      <div className={styles.settings} style={{ color: store.color.get, fontSize: store.fontSize.get }}>
         <div className={styles.pictureFrame}>
-          <p style={{ textAlign: 'center' }}>Change profile picture</p><br />
+          <h3 style={{ textAlign: 'center' }}>Change profile picture</h3>
+          <br />
           <img src={localStorage.profilePicture} ></img><br />
-
           <input
             type="file"
             id="profilePicture"
@@ -45,22 +60,22 @@ const Settings = () => {
             onChange={imageUpload} />
         </div>
         <div className={styles.colorFrame}>
-          <p>Change theme color</p>
+          <h3>Change theme color</h3>
           <InputColor
             initialValue="#5e72e4CC"
             onChange={setColor}
             placement="top"
           />
-          <button onClick={handleClick}>Change Theme</button>
+          <button onClick={handleTheme}>Change Theme</button>
         </div>
-
-                Change username
-                Change Password
-
+        <div className={styles.fontFrame}>
+          <h3>Change Fontsize</h3>
+          <div>
+            <button className={styles.smallButton} onClick={handleSmallFont}>Small</button>
+            <button className={styles.mediumButton} onClick={handleMediumFont}>Medium</button>
+            <button className={styles.largeButton} onClick={handleBigFont}>Large</button>
+          </div>
         </div>
-      <div className={styles.settings} style={{ color: store.color.get }}>
-        <h3>Change themes</h3>
-        <button>Fontsize</button>
         <button>Background image</button>
       </div>
     </Wrapper>

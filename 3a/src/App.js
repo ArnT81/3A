@@ -11,24 +11,19 @@ import Contacts from '../src/components/Contacts/Contacts';
 import image from './media/oceandawn.jpg';
 
 const App = () => {
-  const [user, setUser] = useState(false)
-  const [profilePicture, setProfilePicture] = useState(localStorage.profilePicture)
-  const [theme, setTheme] = useState('rgba(0,0,0,0.8)')
-  const [color, setColor] = useState('white')
+  const [user, setUser] = useState(false);
+  const [profilePicture, setProfilePicture] = useState(localStorage.profilePicture);
+  const [theme, setTheme] = useState('rgba(0,0,0,0.8)');
+  const [color, setColor] = useState('white');
+  const [fontSize, setFontSize] = useState('medium');
 
   const store = {
     user: { get: user, set: setUser },
     profilePicture: { get: profilePicture, set: setProfilePicture },
     theme: { get: theme, set: setTheme },
-    color: { get: color, set: setColor }
-  }
-
-  /* const theme = {
-    color: "white",
-    background: "rgba(0,0,0,0.8)",
-    fontFamily: "Arial",
-    fontSize: "20px"
-  } */
+    color: { get: color, set: setColor },
+    fontSize: { get: fontSize, set: setFontSize }
+  };
 
   /*  if (!user) {
      return (
