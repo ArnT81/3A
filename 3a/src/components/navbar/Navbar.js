@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../themeContext/ThemeContext'
 import { Link } from 'react-router-dom'
+import logo from '../../../src/media/logo512.png'
 import styles from './navbar.module.css'
 
 
@@ -11,6 +12,9 @@ const Navbar = (props) => {
     return (
         <div className={styles.navbar} style={{ background: store.theme.get, color: store.color.get }}>
             <nav>
+                <div>
+                    <img src={logo} className={styles.logo}/>
+                </div>
                 <ul>
                     <li>
                         <Link to="/login" style={{ color: store.color.get }}>Login</Link>

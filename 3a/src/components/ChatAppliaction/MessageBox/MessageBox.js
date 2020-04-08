@@ -1,14 +1,17 @@
 import TextField from "@material-ui/core/TextField";
 import React, { useState } from "react";
+import Wrapper from '../../wrapper/Wrapper'
 
 const MessageBox = ({ onSendMessage: pushSendMessage }) => {
   const [message, setMessage] = useState("");
 
   return (
+    <Wrapper>
+      <h3>Chat</h3>
     <TextField
+      style={{ background: 'white' }}
       fullWidth
-      label="Message"
-      margin="normal"
+      label="Start chat"
       multiline
       onChange={evt => setMessage(evt.target.value)}
       onKeyDown={evt => {
@@ -21,6 +24,7 @@ const MessageBox = ({ onSendMessage: pushSendMessage }) => {
       rows="4"
       value={message}
     />
+    </Wrapper>
   );
 };
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { firebase, db, auth } from '../../firebase'
-import style from './contacts.module.css'
+import styles from './contacts.module.css'
 
 
 const Contacts = () => {
@@ -15,7 +15,6 @@ const Contacts = () => {
         return contact.username
     })
 
-
     useEffect(() => {
         db.collection('Users')
             .get()
@@ -26,23 +25,20 @@ const Contacts = () => {
                     users.push(data)
                 })
                 setContacts(users)
-
             })
             .catch(error => console.log(error))
     }, []);
 
-    console.log(filteredContact)
     useEffect(() => {
-
         const results = people.filter(contact =>
             contact.toLowerCase().includes(searchTerm)
         );
         setSearchResults(results);
     }, [searchTerm]);
 
-
-    return (
-        <>
+return (
+        <div className={styles.contacts}>
+            <h4>Search user</h4>
             <input
                 type="text"
                 placeholder="Search"
@@ -51,13 +47,13 @@ const Contacts = () => {
             />
 
             {searchTerm ? searchResults.map(item => (
-                <h3 style={{ color: 'white' }}>{item}</h3>
+                <h4 className={styles.search}>{item}</h4>
             )) : null}
 
             {contacts && contacts.map((contact) => {
-                return <h3 >{contact.username}</h3>
+                return <h4>{contact.username}</h4>
             })}
-        </>
+        </div>
     )
 }
 

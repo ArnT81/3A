@@ -27,7 +27,6 @@ const RegistertUser = (props) => {
                     <div >
                         <label htmlFor="firstname">First Name:</label>
                         <input type="text" name="firstname" />
-
                     </div>
                     <div>
                         <label htmlFor="lastname">Last Name:</label>

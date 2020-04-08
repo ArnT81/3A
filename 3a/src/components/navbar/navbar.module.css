@@ -10,8 +10,15 @@
     border-top-right-radius: 6px;
 }
 
+.logo {
+    position: absolute;
+    top: -7px;
+    left: 100px;
+    width: 100px;
+}
+
 .navbar>nav>ul {
-    margin-left: 13vw;
+    margin-left: 17vw;
     text-align: left;
     display: inline-flex;
     list-style: none;
@@ -34,3 +41,4 @@
     border-radius: 20px;
     box-shadow: 3px 3px 5px black, 0px 0px 30px rgb(84, 87, 255);
 }
+
