@@ -1,16 +1,13 @@
 import TextField from "@material-ui/core/TextField";
 import React, { useState } from "react";
-import Wrapper from '../../wrapper/Wrapper'
+import styles from '../MessageBox/messageBox.module.css'
 
 const MessageBox = ({ onSendMessage: pushSendMessage }) => {
   const [message, setMessage] = useState("");
 
   return (
-    <Wrapper>
-      <h3>Chat</h3>
     <TextField
-      style={{ background: 'white' }}
-      fullWidth
+      className={styles.messageBox}
       label="Start chat"
       multiline
       onChange={evt => setMessage(evt.target.value)}
@@ -21,10 +18,9 @@ const MessageBox = ({ onSendMessage: pushSendMessage }) => {
           setMessage("");
         }
       }}
-      rows="4"
+      rows="16"
       value={message}
     />
-    </Wrapper>
   );
 };
 

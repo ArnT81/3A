@@ -21,7 +21,7 @@ const RegistertUser = (props) => {
 
     return (
         <Wrapper>
-            <div className={styles.registerUser} style={{ background: store.theme.get, color: store.color.get }}>
+            <div className={styles.registerUser} style={{ color: store.color.get }}>
                 <p>Register new user</p>
                 <form name="form" onSubmit={register}>
                     <div >

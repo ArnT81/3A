@@ -10,6 +10,8 @@ import Settings from './components/settings/Settings';
 import Contacts from '../src/components/Contacts/Contacts';
 import image from './media/oceandawn.jpg';
 import Message from './components/ChatAppliaction/Chat'
+import MessageBox from './components/ChatAppliaction/MessageBox';
+import { red } from '@material-ui/core/colors';
 
 const App = () => {
   const [user, setUser] = useState(false);
@@ -38,8 +40,9 @@ const App = () => {
    } */
   return (
     <ThemeContext.Provider value={store}>
+      {/* {<img src={image} alt="ocean at dawn" />} */}
       <div>
-        {<img src={image} alt="ocean at dawn" />}
+        
         <Router>
           <Navbar />
           <Sidebar>
@@ -53,6 +56,7 @@ const App = () => {
               <Route path="/settings" render={props => <Settings {...props} />} />
               <Route path="/message" render={props => <Message {...props} />} />
             </Switch>
+            {/* <MessageBox /> */}
           </Main>
         </Router>
       </div>

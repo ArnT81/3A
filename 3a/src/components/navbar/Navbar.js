@@ -29,10 +29,7 @@ const Navbar = (props) => {
                         <Link to="/register" style={{ color: store.color.get }}>Register</Link>
                     </li>
                     <li>
-                        <Link to="/search" style={{ color: store.color.get }}>Search</Link>
-                    </li>
-                    <li>
-                        <Link style={{ color: store.color.get }}>Lorem</Link>
+                        <Link to="/search" style={{ color: store.color.get }}>Empty</Link>
                     </li>
                 </ul>
                 {/* <NavLink to="/login" style={{ color: props.theme.color }}>Login</NavLink>

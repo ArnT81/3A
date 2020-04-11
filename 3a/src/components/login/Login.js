@@ -15,7 +15,7 @@ const Login = (props) => {
   return (
     <React.Fragment>
       <Wrapper>
-        <div className={styles.login} style={{ background: store.theme.get, color: store.color.get }}>
+        <div className={styles.login} style={{ color: store.color.get }}>
           <h3>Login</h3>
           <form name="form" onSubmit={Login}>
             <div>

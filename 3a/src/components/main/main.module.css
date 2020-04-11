@@ -1,9 +1,13 @@
 .main {
     position: absolute;
+    display: flex;
     top: 13vh;
     left: 28vw;
-    width: 62vw;
+    width: 50vw;
     height: 80vh;
     border-bottom-right-radius: 6px;
     background: rgba(0,0,0,0.6);
+    padding: 10px;
+    padding-right: 20px;
+    box-sizing: border-box;
 }

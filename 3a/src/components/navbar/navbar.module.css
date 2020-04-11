@@ -3,11 +3,12 @@
     position: absolute;
     top: 5vh;
     left: 10vw;
-    width: 80vw;
+    width: 68vw;
     height: 8vh;
     align-items: center;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -15,6 +16,7 @@
     top: -7px;
     left: 100px;
     width: 100px;
+    margin-right: 10px;
 }
 
 .navbar>nav>ul {
@@ -34,7 +36,7 @@
 
 .profilePicture {
     position: absolute;
-    bottom: 20px;
+    top: 20px;
     right: 35px;
     width: 32px;
     height: 32px;
