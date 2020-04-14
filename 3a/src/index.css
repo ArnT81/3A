@@ -62,7 +62,7 @@ button {
 #menuToggle {
   visibility: hidden;
 }
-
+/* ____________________________________________ */
 @media screen and (max-width: 810px) { 
  
 #menuToggle
@@ -70,8 +70,8 @@ button {
   visibility: visible;
   display: block;
   position: relative;
-  top: 42px;
-  left: 20px;
+  top: 5px;
+  left: 25px;
   z-index: 1;
   -webkit-user-select: none;
   user-select: none;
@@ -80,13 +80,13 @@ button {
 #menuToggle a
 {
   text-decoration: none;
-  color: #232323;
+  color: white;
   transition: color 0.3s ease;
 }
 
 #menuToggle a:hover
 {
-  color: tomato;
+  text-shadow: 0px 0px 10px yellow;
 }
 
 
@@ -110,7 +110,7 @@ button {
 #menuToggle span
 {
   display: block;
-  width: 33px;
+  width: 35px;
   height: 4px;
   margin-bottom: 5px;
   position: relative;
@@ -167,26 +167,27 @@ button {
  */
 #menu
 {
+  visibility: hidden;
   position: absolute;
-  width: 150px;
-  margin: -100px 0 0 -50px;
-  padding: 20px;
-  padding-top: 100px;
-  
-  background: #ededed;
+  width: 200px;
+  top: 138px;
+  left: -25px;
+  margin: -100px 0 0 0;/* _____________________________ */
+  /* padding: 80px; */
+  padding-left: 20px;
+  background: rgba(0,0,0,0.8);
+  border-bottom-right-radius: 10px;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
-  
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
-  
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 #menu li
 {
-  padding: 10px 0;
+  padding: 10px;
   font-size: 22px;
 }
 
@@ -196,5 +197,6 @@ button {
 #menuToggle input:checked ~ ul
 {
   transform: none;
+  visibility: visible;
 }
 }

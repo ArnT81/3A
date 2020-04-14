@@ -18,7 +18,7 @@ const Navbar = (props) => {
                         <span></span>
                         <span></span>
                         <span></span>
-                        <ul id="menu">
+                       { <ul id="menu">
                             <li>
                                 <Link to="/message">Message</Link>
                             </li>
@@ -28,7 +28,7 @@ const Navbar = (props) => {
                             <a href="#"><li>Logout</li></a>
                             <a href="#"><li>Contacts</li></a>
                             <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
-                        </ul>
+                        </ul>}
                     </div>
                 </nav></div>
                 <div>

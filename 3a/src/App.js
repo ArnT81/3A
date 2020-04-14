@@ -28,7 +28,7 @@ const App = () => {
     fontSize: { get: fontSize, set: setFontSize }
   };
 
-  if (!user) {
+ /*  if (!user) {
     return (
       <ThemeContext.Provider value={store}>
         <div>
@@ -37,12 +37,11 @@ const App = () => {
         </div>
       </ThemeContext.Provider>
     )
-  }
+  } */
   return (
     <ThemeContext.Provider value={store}>
       {<img src={image} alt="ocean at dawn" />}
       <div className="container">
-
         <Router>
           <Navbar />
           <Sidebar>
