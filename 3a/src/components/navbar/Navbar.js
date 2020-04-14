@@ -7,7 +7,7 @@ import styles from './navbar.module.css'
 
 
 const Navbar = (props) => {
-    const store = useContext(ThemeContext)
+    const store = useContext(ThemeContext);
 
     return (
         <div className={styles.navbar} style={{ background: store.theme.get, color: store.color.get }}>
@@ -35,9 +35,6 @@ const Navbar = (props) => {
                     <img src={logo} className={styles.logo} />
                 </div>
                 <ul>
-                    <li>
-                        <Link to="/login" style={{ color: store.color.get }}>Login</Link>
-                    </li>
                     <li>
                         <Link to="/message" style={{ color: store.color.get }}>Message</Link>
                     </li>

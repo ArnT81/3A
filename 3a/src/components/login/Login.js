@@ -1,20 +1,19 @@
 import React, { useContext } from 'react';
-import Wrapper from '../wrapper/Wrapper'
 import { ThemeContext } from '../themeContext/ThemeContext';
 // import firebase from '../../firebase.js ';
 import styles from './login.module.css';
 
 const Login = () => {
-  const store = useContext(ThemeContext)
-  console.log(store)
+  const store = useContext(ThemeContext);
+  
   const Login = (e) => {
-    e.preventDefault()
-    store.user.set(true)
+    e.preventDefault();
+    store.user.set(true);
   }
 
   return (
     <React.Fragment>
-      <div className={styles.login} style={{ color: store.color.get }}  >
+      <div className={styles.login} style={{ background: store.theme.get, color: store.color.get }}>
         <h3>Login</h3>
         <form name="form" onSubmit={Login}>
           <div>
