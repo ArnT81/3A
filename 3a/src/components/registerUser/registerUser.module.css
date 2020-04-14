@@ -6,3 +6,9 @@
     margin-top: 2;
     font-size: large;
 }
+
+@media screen and (max-width: 450px) { 
+.registerUser {
+    width: 75vw;
+}
+}

@@ -12,8 +12,27 @@ const Navbar = (props) => {
     return (
         <div className={styles.navbar} style={{ background: store.theme.get, color: store.color.get }}>
             <nav>
+                <div><nav role="navigation">
+                    <div id="menuToggle">
+                        <input type="checkbox" />
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <ul id="menu">
+                            <li>
+                                <Link to="/message">Message</Link>
+                            </li>
+                            <li>
+                                <Link to="/settings">Setting</Link>
+                            </li>
+                            <a href="#"><li>Logout</li></a>
+                            <a href="#"><li>Contacts</li></a>
+                            <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
+                        </ul>
+                    </div>
+                </nav></div>
                 <div>
-                    <img src={logo} className={styles.logo}/>
+                    <img src={logo} className={styles.logo} />
                 </div>
                 <ul>
                     <li>

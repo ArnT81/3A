@@ -5,3 +5,9 @@
     padding: 20px;
     overflow: hidden;
 }
+
+@media screen and (max-width: 810px) { 
+.wrapper {
+   overflow: scroll;
+}
+}

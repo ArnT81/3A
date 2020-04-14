@@ -1,6 +1,6 @@
 .messageBox {
     position: absolute;
-    top: 0px;
+    top: -15px;
     left: 0px;
     width: 30vw;
     height: 50%;
@@ -13,4 +13,11 @@
 .messageBox>div>ul {
     padding: 0px;
     margin: 0px;
+}
+
+@media screen and (max-width: 810px) { 
+.messageBox {
+    width: 83vw;
+    height: 50%;
+}
 }

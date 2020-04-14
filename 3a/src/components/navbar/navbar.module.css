@@ -14,7 +14,7 @@
 .logo {
     position: absolute;
     top: -7px;
-    left: 100px;
+    left: 9.5%;
     width: 100px;
     margin-right: 10px;
 }
@@ -28,6 +28,7 @@
 
 .navbar>nav>ul>li {
     margin: 10px;
+    visibility: visible;
 }
 
 .navbar>nav>ul>li:hover {
@@ -44,3 +45,26 @@
     box-shadow: 3px 3px 5px black, 0px 0px 30px rgb(84, 87, 255);
 }
 
+@media screen and (max-width: 810px) { 
+.navbar {
+    top: 0px;
+    left: 0px;
+    width: 88vw;
+} 
+
+.logo {
+    top: 2px;
+    left: 11px;
+    left: 44%;
+    width: 50px;
+}
+
+.navbar>nav>ul>li {
+    visibility: hidden;
+}
+
+.profilePicture {
+    top: 12px;
+    right: 15px;
+} 
+}

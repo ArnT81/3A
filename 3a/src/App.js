@@ -28,21 +28,21 @@ const App = () => {
     fontSize: { get: fontSize, set: setFontSize }
   };
 
-  /*  if (!user) {
-     return (
-       <ThemeContext.Provider>
-         <div>
-           <Login setUser={setUser} />
-           {<img src={image} alt="ocean at dawn" className="backgroundImg" />}
-         </div>
-       </ThemeContext.Provider>
-     )
-   } */
+  if (!user) {
+    return (
+      <ThemeContext.Provider value={store}>
+        <div>
+          <Login />
+          {<img src={image} alt="ocean at dawn" className="backgroundImg" />}
+        </div>
+      </ThemeContext.Provider>
+    )
+  }
   return (
     <ThemeContext.Provider value={store}>
-      {/* {<img src={image} alt="ocean at dawn" />} */}
-      <div>
-        
+      {<img src={image} alt="ocean at dawn" />}
+      <div className="container">
+
         <Router>
           <Navbar />
           <Sidebar>
@@ -50,7 +50,7 @@ const App = () => {
           </Sidebar>
           <Main>
             <Switch>
-              <Route path="/" exact render={props => <Login {...props} />} />
+              <Route path="/" exact render={props => <Message {...props} />} />
               <Route path="/login" render={props => <Login {...props} />} />
               <Route path="/register" render={props => <RegisterUser {...props} />} />
               <Route path="/settings" render={props => <Settings {...props} />} />

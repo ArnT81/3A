@@ -62,3 +62,10 @@
 .largeButton {
     width: 43%;
 }
+
+@media screen and (max-width: 810px) { 
+.pictureFrame>img {
+    width: 282px;
+    height: 320px;
+}
+} 
