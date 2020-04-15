@@ -26,12 +26,12 @@ const RegistertUser = (props) => {
             <form name="form" onSubmit={handleSubmit(registerNewUser)} >
                 <div >
                     <label htmlFor="firstname">First Name:</label>
-                    <input ref={register({ required: true, minLength: 6 })} placeholder="You'r First Name Here" type="text" name="firstname" />
+                    <input ref={register({ required: true, minLength: 4 })} placeholder="You'r First Name Here" type="text" name="firstname" />
                     {errors.firstname && <p className={styles.errors}>First name is required</p>}
                 </div>
                 <div>
                     <label htmlFor="lastname">Last Name:</label>
-                    <input ref={register({ required: true, minLength: 6 })} placeholder="You'r Last Name Here" type="text" name="lastname" />
+                    <input ref={register({ required: true, minLength: 4 })} placeholder="You'r Last Name Here" type="text" name="lastname" />
                     {errors.lastname && <p className={styles.errors}> Last name is required</p>}
                 </div>
                 <div>

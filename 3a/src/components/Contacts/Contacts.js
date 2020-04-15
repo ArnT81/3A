@@ -44,7 +44,7 @@ const Contacts = () => {
     }
     return (
         <div className={styles.contacts}>
-            <h4>Search user</h4>
+            <h3>Search User</h3>
             <input
                 type="text"
                 placeholder="Search"
