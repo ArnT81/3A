@@ -5,6 +5,7 @@
 
 .contacts>h4 {
     margin: 5px;
+    cursor: pointer;
 }
 
 .contacts>input {

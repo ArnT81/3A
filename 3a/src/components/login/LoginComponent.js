@@ -42,7 +42,7 @@ const LoginComponent = () => {
 
   return (
     <React.Fragment>
-      <div className={styles.login} style={{ background: store.theme.get, color: store.color.get }}>
+      <div className={styles.login} style={{ background: store.mainTheme.get, color: store.color.get }}>
         <h3>Login</h3>
         <form name="form" onSubmit={loginUser}>
           <div>
@@ -53,10 +53,10 @@ const LoginComponent = () => {
             <label>Password:</label>
             <input name="password" type="password" placeholder="Enter Password" />
           </div>
-          {wrongUser ? <div >Your Email or Password is wrong!</div> : null}
+          {wrongUser ? <div className={styles.wrongUser} >Your Email or Password is wrong!</div> : null}
           <button>Login</button>
           <div>
-            <Link to={() => ({ ...RegistertUser, pathname: "/register" })} >Register</Link>
+            <Link to={() => ({ ...RegistertUser, pathname: "/register" })} >Not a member? Register now</Link>
           </div>
         </form>
       </div>

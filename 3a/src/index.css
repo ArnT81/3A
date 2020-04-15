@@ -112,7 +112,7 @@ button {
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-  background: #cdcdcd;
+  background: #919191;
   border-radius: 3px;
   z-index: 1;
   transform-origin: 4px 0px;
@@ -139,7 +139,7 @@ button {
 {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
+  background: #494949;
 }
 
 /*

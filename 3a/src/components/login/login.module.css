@@ -9,10 +9,27 @@
     padding: 20px;
 }
 
+.login>form>button {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.wrongUser {
+    margin-top: 20px;
+    margin-left: 15px;
+    color: red;
+}
+
+.login>form>div>a {
+    font-size: medium;
+    color: white;
+}
+
 @media screen and (max-width: 810px) { 
-    .login {
-       top: 20px;
-       left: 20px;
-       width: 330px;
-    }
-    }
+.login {
+    position: relative;
+    top: 8px;
+    left: -5px;
+    width: 330px;
+}
+}
