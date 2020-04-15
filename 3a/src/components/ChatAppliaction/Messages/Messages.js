@@ -21,7 +21,7 @@ const Messages = ({ messages }) => {
               src={store.profilePicture.get}
             />
           </ListItemAvatar>
-          <ListItemText primary={message} />
+          <ListItemText style={{ color: "white", fontSize: "200" }} primary={message} />
         </ListItem>,
         <Divider
           component="li"

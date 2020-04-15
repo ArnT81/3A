@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../themeContext/ThemeContext';
 import styles from '../background/background.module.css';
+import Wrapper from '../wrapper/Wrapper'
 
 import image1 from '../../media/oceandawn.jpg';
 import image2 from '../../media/snowymountain.jpg';
@@ -25,12 +26,14 @@ const BackgroundComponent = () => {
     }
 
     return (
-        <div className={styles.backgroundComponent}>
-            <h2>Pictures</h2>
-            <img src={image1} width="100px" onClick={handleBackground1}></img>
-            <img src={image2} width="100px" onClick={handleBackground2}></img>
-            <img src={image3} width="100px" onClick={handleBackground3}></img>
-        </div>
+        <Wrapper>
+            <div className={styles.backgroundComponent}>
+                <h2>Pictures</h2>
+                <img src={image1} width="100px" onClick={handleBackground1}></img>
+                <img src={image2} width="100px" onClick={handleBackground2}></img>
+                <img src={image3} width="100px" onClick={handleBackground3}></img>
+            </div>
+        </Wrapper>
     )
 }
 

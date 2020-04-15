@@ -41,7 +41,7 @@ const Navbar = (props) => {
                         <Link to="/settings" style={{ color: store.color.get }}>Setting</Link>
                     </li>
                     <li>
-                        <Link onClick={logoutFunc} to="/login"  className={styles.logout}>Logout</Link>
+                        <Link onClick={logoutFunc} to="/login" className={styles.logout}>Logout</Link>
                     </li>
                 </ul>
             </nav>

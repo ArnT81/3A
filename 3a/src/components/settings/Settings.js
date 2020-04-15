@@ -3,6 +3,7 @@ import { ThemeContext } from '../themeContext/ThemeContext';
 import Wrapper from '../wrapper/Wrapper';
 import InputColor from 'react-input-color';
 import styles from './settings.module.css';
+import { Link } from 'react-router-dom'
 
 
 const Settings = () => {
@@ -76,7 +77,7 @@ const Settings = () => {
             <button className={styles.largeButton} onClick={handleBigFont}>Large</button>
           </div>
         </div>
-        <button>Background image</button>
+        <button> <Link to="settings/background" style={{ color: store.color.get }}>Background images</Link></button>
       </div>
     </Wrapper>
   );
