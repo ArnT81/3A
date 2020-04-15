@@ -28,10 +28,10 @@ const BackgroundComponent = () => {
     return (
         <Wrapper>
             <div className={styles.backgroundComponent}>
-                <h2>Pictures</h2>
-                <img src={image1} width="100px" onClick={handleBackground1}></img>
-                <img src={image2} width="100px" onClick={handleBackground2}></img>
-                <img src={image3} width="100px" onClick={handleBackground3}></img>
+                <h3>Pictures</h3>
+                <img src={image1} width="160px" onClick={handleBackground1}></img>
+                <img src={image2} width="160px" onClick={handleBackground2}></img>
+                <img src={image3} width="160px" onClick={handleBackground3}></img>
             </div>
         </Wrapper>
     )
