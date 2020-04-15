@@ -8,6 +8,15 @@
     cursor: pointer;
 }
 
+.contacts>h4 {
+    margin: 5px;
+    cursor: pointer;
+}
+
+.contacts>h4:hover {
+    text-shadow: 0px 0px 10px yellow;
+}
+
 .contacts>input {
     width: 98%;
     margin-bottom: 20px;

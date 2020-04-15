@@ -21,7 +21,8 @@
 
 .navbar>nav>ul {
     position: absolute;
-    top: 0px;
+    top: -4px;
+    right: 85px;
     margin-left: 16vw;
     text-align: left;
     display: inline-flex;
@@ -34,6 +35,15 @@
 }
 
 .navbar>nav>ul>li:hover {
+    text-shadow: 1px 1px 5px white;
+}
+
+.logout {
+    color: white;
+}
+
+.logout:hover {
+    color: red;
     text-shadow: 1px 1px 5px white;
 }
 
