@@ -5,19 +5,20 @@ import Wrapper from '../wrapper/Wrapper'
 import { Link } from 'react-router-dom'
 import styles from './registerUser.module.css'
 
+
 const RegistertUser = (props) => {
     const store = useContext(ThemeContext);
-
-    const register = (user) => {
-        user.preventDefault();
+    const register = (e) => {
+        e.preventDefault();
         db.collection('Users').add({
-            firstname: user.target.firstname.value,
-            lastname: user.target.lastname.value,
-            username: user.target.username.value,
-            password: user.target.password.value,
+            firstname: e.target.firstname.value,
+            lastname: e.target.lastname.value,
+            username: e.target.username.value,
+            password: e.target.password.value,
         });
-        console.log(user.target)
+        store.user.set(true);
     }
+
 
     return (
         <Wrapper>
@@ -26,29 +27,30 @@ const RegistertUser = (props) => {
                 <form name="form" onSubmit={register}>
                     <div >
                         <label htmlFor="firstname">First Name:</label>
-                        <input type="text" name="firstname" />
+                        <input placeholder="You'r First Name Here" type="text" name="firstname" />
                     </div>
                     <div>
                         <label htmlFor="lastname">Last Name:</label>
-                        <input type="text" name="lastname" />
+                        <input placeholder="You'r Last Name Here" type="text" name="lastname" />
                     </div>
                     <div>
                         <label htmlFor="username">Username:</label>
-                        <input type="text" name="username" />
+                        <input placeholder="You'r User Name Here" type="text" name="username" />
                     </div>
                     <div>
                         <label htmlFor="password">Password:</label>
-                        <input type="password" name="password" />
+                        <input placeholder="You'r Password Here" type="password" name="password" />
                     </div>
                     <div >
                         <button type="submit" >Register</button>
-                        <button ><Link to="/login" >Cancel</Link></button>
+                        <Link to={LoginComponent => ({ ...LoginComponent, pathname: "/login" })} >Cancel</Link>
                     </div>
                 </form>
             </div >
         </Wrapper>
     )
 }
+
 
 export default RegistertUser;
 

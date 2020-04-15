@@ -1,9 +1,10 @@
 .messageBox {
-    position: relative;
-    top: -15px;
+    position: absolute;
+    /* top: -15px; */
     left: 0px;
-    width: 38.9vw;
-    height: 50%;
+    width: 37.6vw;
+    bottom:0px;
+    height: 10%;
     padding: 20px;
     background: white;
     border-radius: 4px;

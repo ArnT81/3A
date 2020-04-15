@@ -4,12 +4,13 @@ import { ThemeContext } from './components/themeContext/ThemeContext';
 import Navbar from './components/navbar/Navbar';
 import Sidebar from './components/sidebar/Sidebar';
 import Main from './components/main/Main';
-import Login from './components/login/Login';
+import LoginComponent from './components/login/LoginComponent';
 import RegisterUser from './components/registerUser/RegisterUser';
 import Settings from './components/settings/Settings';
 import Contacts from '../src/components/Contacts/Contacts';
 import image from './media/oceandawn.jpg';
 import Message from './components/ChatAppliaction/Chat';
+
 
 const App = () => {
   const [user, setUser] = useState(false);
@@ -26,34 +27,29 @@ const App = () => {
     fontSize: { get: fontSize, set: setFontSize }
   };
 
-  if (!user) {
-    return (
-      <ThemeContext.Provider value={store}>
-        <div>
-          <Login />
-          {<img src={image} alt="ocean at dawn" className="backgroundImg" />}
-        </div>
-      </ThemeContext.Provider>
-    )
-  }
   return (
     <ThemeContext.Provider value={store}>
       {<img src={image} alt="ocean at dawn" />}
       <div className="container">
         <Router>
-          <Navbar />
-          <Sidebar>
-            <Contacts />
-          </Sidebar>
-          <Main>
-            <Switch>
-              <Route path="/" exact render={props => <Message {...props} />} />
-              <Route path="/login" render={props => <Login {...props} />} />
-              <Route path="/register" render={props => <RegisterUser {...props} />} />
-              <Route path="/settings" render={props => <Settings {...props} />} />
-              <Route path="/message" render={props => <Message {...props} />} />
-            </Switch>
-          </Main>
+          {user ? <> <Navbar />
+            <Sidebar>
+              <Contacts />
+            </Sidebar> </> : null}
+          <Switch>
+            {!user ?
+              <>
+                <Route path="/" exact render={props => <LoginComponent {...props} />} />
+                <Route path="/login" render={props => <LoginComponent {...props} />} />
+                <Route path="/register" render={props => <RegisterUser {...props} />} />
+              </> :
+              <Main>
+                <Route path="/settings" render={props => <Settings {...props} />} />
+                <Route path="/message" render={props => <Message {...props} />} />
+              </Main>
+            }
+
+          </Switch>
         </Router>
       </div>
     </ThemeContext.Provider>
