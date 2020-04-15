@@ -27,7 +27,6 @@ const Navbar = (props) => {
                             </li>
                             <a href="#"><li>Logout</li></a>
                             <a href="#"><li>Contacts</li></a>
-                            <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
                         </ul>}
                     </div>
                 </nav></div>
@@ -42,7 +41,7 @@ const Navbar = (props) => {
                         <Link to="/settings" style={{ color: store.color.get }}>Setting</Link>
                     </li>
                     <li>
-                        <Link to="/register" style={{ color: store.color.get }}>Register</Link>
+                        <Link to="/background" style={{ color: store.color.get }}>Background</Link>
                     </li>
                     <li>
                         <Link to="/search" style={{ color: store.color.get }}>Empty</Link>
