@@ -10,8 +10,15 @@
 }
 
 .registerUser>p {
-    margin-top: 2;
+    margin-top: 2px;
     font-size: large;
+    margin-bottom: 0;
+}
+
+.errors {
+    margin: 5px 0px;
+    font-size: small;
+    color: red;
 }
 
 @media screen and (max-width: 450px) { 
