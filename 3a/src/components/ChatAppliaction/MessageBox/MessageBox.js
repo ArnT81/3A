@@ -1,12 +1,11 @@
-import TextField from "@material-ui/core/TextField";
 import React, { useState } from "react";
 import styles from '../MessageBox/messageBox.module.css'
 
-const MessageBox = ({ onSendMessage: pushSendMessage }) => {
+const MessageBox = ({ onSendMessage: pushSendMessage, }) => {
   const [message, setMessage] = useState("");
 
   return (
-    <TextField
+    <input
       className={styles.messageBox}
       label="Start chat"
       multiline
@@ -18,7 +17,7 @@ const MessageBox = ({ onSendMessage: pushSendMessage }) => {
           setMessage("");
         }
       }}
-      rows="16"
+      rows="4"
       value={message}
     />
   );

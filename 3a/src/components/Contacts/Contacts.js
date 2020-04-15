@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import { firebase, db, auth } from '../../firebase'
 import styles from './contacts.module.css'
+import { Link, useHistory } from 'react-router-dom'
+import { ThemeContext } from '../themeContext/ThemeContext'
 
 
 const Contacts = () => {
@@ -8,6 +10,7 @@ const Contacts = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const [searchResults, setSearchResults] = useState([]);
     let filteredContact = Object.keys(contacts).map((key) => contacts[key]);
+    const history = useHistory()
     const handleChange = event => {
         setSearchTerm(event.target.value);
     };
@@ -35,8 +38,11 @@ const Contacts = () => {
         );
         setSearchResults(results);
     }, [searchTerm]);
-
-return (
+    const startMsg = () => {
+        history.push('/message')
+        console.log('Adnaaaaaaan')
+    }
+    return (
         <div className={styles.contacts}>
             <h4>Search user</h4>
             <input
@@ -47,14 +53,13 @@ return (
             />
 
             {searchTerm ? searchResults.map(item => (
-                <h4 className={styles.search}>{item}</h4>
+                <h4 onClick={startMsg} className={styles.search}> {item}</h4>
             )) : null}
 
-            {contacts && contacts.map((contact) => {
-                return <h4>{contact.username}</h4>
-            })}
+            {!searchTerm ? contacts.map((contact) => {
+                return <h4 onClick={startMsg} >{contact.username}</h4>
+            }) : null}
         </div>
     )
 }
-
 export default Contacts

@@ -4,9 +4,13 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import ListItemText from "@material-ui/core/ListItemText";
-import React from "react";
+import React, { useContext, useEffect } from "react";
+import { ThemeContext } from "../../themeContext/ThemeContext";
+
 
 const Messages = ({ messages }) => {
+  const store = useContext(ThemeContext);
+
   return (
     <List>
       {messages.flatMap((message, index) => [
@@ -14,7 +18,7 @@ const Messages = ({ messages }) => {
           <ListItemAvatar>
             <Avatar
               alt="Cute Kitten"
-              src="http://placekitten.com/200/200"
+              src={store.profilePicture.get}
             />
           </ListItemAvatar>
           <ListItemText primary={message} />

@@ -8,7 +8,7 @@ import styles from './settings.module.css';
 const Settings = () => {
   const store = useContext(ThemeContext);
   const [color, setColor] = React.useState({});
-  console.log(store)
+  // console.log(store)
 
   const getBase64 = (file) => {
     return new Promise((resolve, reject) => {
