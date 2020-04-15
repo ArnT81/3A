@@ -11,10 +11,7 @@ const RegistertUser = (props) => {
     const store = useContext(ThemeContext);
     const { register, errors, handleSubmit } = useForm()
 
-
     const registerNewUser = (data) => {
-        console.log(data.firstname)
-        // e.preventDefault();
         db.collection('Users').add({
             firstname: data.firstname,
             lastname: data.lastname,
