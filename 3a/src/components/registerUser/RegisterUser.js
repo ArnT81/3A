@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../themeContext/ThemeContext'
 import { firebase, auth, db } from '../../firebase'
-import Wrapper from '../wrapper/Wrapper'
 import { Link } from 'react-router-dom'
 import styles from './registerUser.module.css'
 import { useForm } from 'react-hook-form'
