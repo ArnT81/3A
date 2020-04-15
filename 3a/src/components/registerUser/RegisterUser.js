@@ -20,8 +20,6 @@ const RegistertUser = (props) => {
         store.user.set(true);
     }
 
-    console.log(store)
-
     return (
         <div className={styles.registerUser} style={{ background: store.mainTheme.get, color: store.color.get }}>
             <p>Register new user</p>
@@ -54,6 +52,7 @@ const RegistertUser = (props) => {
         </div >
     )
 }
+
 
 
 export default RegistertUser;

@@ -4,17 +4,19 @@ import styles from './login.module.css';
 import { firebase, db, auth } from '../../firebase'
 import { Link } from 'react-router-dom'
 import RegistertUser from '../registerUser/RegisterUser'
+import { useForm } from 'react-hook-form'
 
 
 const LoginComponent = () => {
   const store = useContext(ThemeContext);
+  const { register, errors, handleSubmit } = useForm()
   const [adnan, setAdnan] = useState([]);
   const [wrongUser, setWrongUser] = useState(false);
 
-  const loginUser = (e) => {
-    e.preventDefault();
+  const loginUser = (data) => {
+
     adnan.find(user => {
-      if (user.username === e.target.username.value && user.password === e.target.password.value) {
+      if (user.username === data.username && user.password === data.password) {
         store.user.set(true);
       }
       else {
@@ -44,14 +46,14 @@ const LoginComponent = () => {
     <React.Fragment>
       <div className={styles.login} style={{ background: store.mainTheme.get, color: store.color.get }}>
         <h3>Login</h3>
-        <form name="form" onSubmit={loginUser}>
+        <form name="form" onSubmit={handleSubmit(loginUser)}>
           <div>
             <label>Email address:</label>
-            <input name="username" type="text" aria-describedby="emailHelp" placeholder="Enter User Name" />
+            <input ref={register({ required: true, minLength: 6 })} name="username" type="text" aria-describedby="emailHelp" placeholder="Enter User Name" />
           </div>
           <div>
             <label>Password:</label>
-            <input name="password" type="password" placeholder="Enter Password" />
+            <input ref={register({ required: true, minLength: 6 })} name="password" type="password" placeholder="Enter Password" />
           </div>
           {wrongUser ? <div className={styles.wrongUser} >Your Email or Password is wrong!</div> : null}
           <button>Login</button>

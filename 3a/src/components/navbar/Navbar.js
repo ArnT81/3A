@@ -25,13 +25,11 @@ const Navbar = (props) => {
                         <span></span>
                         {<ul id="menu">
                             <li>
-                                <Link to="/message">Message</Link>
-                            </li>
-                            <li>
                                 <Link to="/settings">Setting</Link>
                             </li>
-                            <a href="#"><li>Logout</li></a>
-                            <a href="#"><li>Contacts</li></a>
+                            <li>
+                                <Link onClick={logoutFunc} to="/login" style={{ color: store.color.get }}>Logout</Link>
+                            </li>
                         </ul>}
                     </div>
                 </nav></div>
