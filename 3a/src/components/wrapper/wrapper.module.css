@@ -8,6 +8,6 @@
 
 @media screen and (max-width: 810px) { 
 .wrapper {
-   overflow: scroll;
+    overflow: scroll;
 }
 }
