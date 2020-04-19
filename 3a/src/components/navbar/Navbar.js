@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { useHistory } from 'react-router-dom'
 import { ThemeContext } from '../themeContext/ThemeContext';
 import { Link } from 'react-router-dom';
 import logo from '../../../src/media/logo512.png';
@@ -8,9 +9,15 @@ import styles from './navbar.module.css';
 
 const Navbar = (props) => {
     const store = useContext(ThemeContext);
+    const history = useHistory();
+
 
     const logoutFunc = () => {
         store.user.set(false)
+    }
+
+    const showContacts = () => {
+        history.push("/contacts")
     }
 
 
@@ -24,7 +31,7 @@ const Navbar = (props) => {
                         <span></span>
                         <span></span>
                         {<ul id="menu">
-                            <li >
+                            <li onClick={showContacts}>
                                 <Link to="/contacts">Contacts</Link>
                             </li>
                             <li>
