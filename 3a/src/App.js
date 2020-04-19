@@ -52,7 +52,7 @@ const App = () => {
               <Main>
                 <Route path="/background" render={props => <BackgroundComponent {...props} />} />
                 <Route path="/settings" render={props => <Settings {...props} />} />
-                <Route path="/settings/background" render={props => <BackgroundComponent></BackgroundComponent>} />
+                <Route path="/settings/background" render={props => <BackgroundComponent />} />
                 <Route path="/message" render={props => <Message {...props} />} />
               </Main>
             }

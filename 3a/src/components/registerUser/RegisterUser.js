@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../themeContext/ThemeContext'
-import { firebase, auth, db } from '../../firebase'
+import { db } from '../../firebase'
 import { Link } from 'react-router-dom'
 import styles from './registerUser.module.css'
 import { useForm } from 'react-hook-form'
@@ -46,7 +46,7 @@ const RegistertUser = (props) => {
                 </div>
                 <div >
                     <button type="submit" >Register</button>
-                    <Link to={LoginComponent => ({ ...LoginComponent, pathname: "/login" })} >Cancel</Link>
+                    <Link to={LoginComponent => ({ ...LoginComponent, pathname: "/login" })} ><button>Cancel</button></Link>
                 </div>
             </form>
         </div >

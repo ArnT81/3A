@@ -24,6 +24,9 @@ const Navbar = (props) => {
                         <span></span>
                         <span></span>
                         {<ul id="menu">
+                            <li >
+                                <Link to="/contacts">Contacts</Link>
+                            </li>
                             <li>
                                 <Link to="/settings">Setting</Link>
                             </li>
@@ -34,7 +37,7 @@ const Navbar = (props) => {
                     </div>
                 </nav></div>
                 <div>
-                    <img src={logo} className={styles.logo} />
+                    <img src={logo} className={styles.logo} alt="Logo" />
                 </div>
                 <ul>
                     <li>
@@ -46,7 +49,7 @@ const Navbar = (props) => {
                 </ul>
             </nav>
             <div>
-                <img src={localStorage.profilePicture} width="70px" height="70px" className={styles.profilePicture} />
+                <img src={localStorage.profilePicture} width="70px" height="70px" className={styles.profilePicture} alt="Profile" />
             </div>
         </div>
     );
