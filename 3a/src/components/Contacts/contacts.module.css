@@ -25,3 +25,29 @@
 .search{
     text-shadow: 0px 0px 10px yellow;
 }
+
+@media screen and (max-width: 810px) {
+.contacts{
+    color:white;
+    padding:5px;
+    font-size: medium;
+    background: none;
+}
+    
+.contacts>h3 {
+    padding-top:10px;
+}
+
+.contacts>h4 {
+    margin: 5px;
+    cursor: pointer;
+    font-size: small;
+}
+
+.contacts>input {
+    position: relative;
+    left: 5px;
+    width: 97%;
+    margin-bottom: 20px;
+}
+}
