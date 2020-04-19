@@ -38,7 +38,8 @@ const App = () => {
       {<img src={store.background.get} alt="ocean at dawn" />}
       <div className="container">
         <Router>
-          {user ? <> <Navbar />
+          {user ? <>
+            <Navbar />
             <Sidebar>
               <Contacts />
             </Sidebar> </> : null}
