@@ -31,17 +31,25 @@
     color:white;
     padding:5px;
     font-size: medium;
-    background: none;
+    position: relative;
+    left: -5px;
+    height: 67.5vh;
+    width: 90.3vw;
+    border-bottom-right-radius: 6px;
+    z-index: 1;
+    
 }
     
 .contacts>h3 {
     padding-top:10px;
+    text-align: center;
 }
 
 .contacts>h4 {
     margin: 5px;
     cursor: pointer;
-    font-size: small;
+   margin-left: 120px;
+
 }
 
 .contacts>input {

@@ -17,7 +17,7 @@
 
 @media screen and (max-width: 810px) { 
 .sidebar {
-    /* visibility: hidden; */
+    display: none;
     position: relative;
     top: 9vh;
     left: -5px;
@@ -25,5 +25,6 @@
     width: 90.3vw;
     border-bottom-right-radius: 6px;
     z-index: 1;
+    
 } 
 } 
