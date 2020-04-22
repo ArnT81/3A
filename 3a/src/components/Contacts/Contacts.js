@@ -34,7 +34,7 @@ const Contacts = () => {
 
     useEffect(() => {
         const results = people.filter(contact =>
-            contact.toLowerCase().includes(searchTerm)
+            contact.toLowerCase().includes(searchTerm.toLowerCase())
         );
         setSearchResults(results);
     }, [searchTerm]);

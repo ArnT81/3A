@@ -1,3 +1,4 @@
+//this is component that handle the view of the message after entering (Enter button)
 import React, { useState } from "react";
 import styles from '../MessageBox/messageBox.module.css'
 
@@ -14,7 +15,7 @@ const MessageBox = ({ onSendMessage: pushSendMessage, }) => {
         if (evt.key === "Enter") {
           evt.preventDefault();
           pushSendMessage(message);
-          setMessage("");
+          setMessage('');
         }
       }}
       rows="4"
