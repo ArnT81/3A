@@ -10,6 +10,7 @@ const useChat = () => {
       "http://localhost:5000"
     );
 
+    //and here is backend for the chat server
     socketRef.current.on(
       "newChatMessage",
       ({ message }) => {

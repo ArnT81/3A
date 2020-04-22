@@ -1,4 +1,5 @@
 //this is component that handle the view of the message after entering (Enter button)
+//and this will send message you type in
 import React, { useState } from "react";
 import styles from '../MessageBox/messageBox.module.css'
 
