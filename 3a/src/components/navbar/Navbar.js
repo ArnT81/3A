@@ -6,7 +6,9 @@ import logo from '../../../src/media/logo512.png';
 import styles from './navbar.module.css';
 
 
-
+/**
+ * Navbar has logutFunc and ShowContacts function that show contacts Component on click
+ */
 const Navbar = (props) => {
     const store = useContext(ThemeContext);
     const history = useHistory();

@@ -6,7 +6,11 @@ import { Link } from 'react-router-dom'
 import RegistertUser from '../registerUser/RegisterUser'
 import { useForm } from 'react-hook-form'
 
-
+/**
+ * Login function component takes data from firebase with useEffect hook, 
+ * loginUser matches login inputs with firebase data and logins when matches or shows error in 3 seconds when wrong.
+ * Simple validating with useForm.
+ */
 const LoginComponent = () => {
   const store = useContext(ThemeContext);
   const { register, handleSubmit } = useForm()

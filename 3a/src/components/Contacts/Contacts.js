@@ -4,12 +4,21 @@ import styles from './contacts.module.css'
 import { useHistory } from 'react-router-dom'
 
 
+
+/**
+ * Contacts function component with useEffect hook takes the users from firebase.
+ * Returning each user with map function.
+ * handleChange function takes the value from search input, useEffect hook and filter function matches users username
+ * input value.
+ */
+
 const Contacts = (props) => {
     const [contacts, setContacts] = useState([])
     const [searchTerm, setSearchTerm] = useState("");
     const [searchResults, setSearchResults] = useState([]);
     let filteredContact = Object.keys(contacts).map((key) => contacts[key]);
     const history = useHistory()
+
 
     const handleChange = event => {
         setSearchTerm(event.target.value);
