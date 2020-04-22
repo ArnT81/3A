@@ -53,7 +53,7 @@ const Settings = () => {
         <div className={styles.pictureFrame}>
           <h3 style={{ textAlign: 'center' }}>Change profile picture</h3>
           <br />
-          <img src={localStorage.profilePicture} ></img><br />
+          <img src={localStorage.profilePicture} alt="Profile" ></img><br />
           <input
             type="file"
             id="profilePicture"

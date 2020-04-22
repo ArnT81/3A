@@ -1,16 +1,25 @@
 import React, { useContext } from 'react';
+import { useHistory } from 'react-router-dom'
 import { ThemeContext } from '../themeContext/ThemeContext';
 import { Link } from 'react-router-dom';
 import logo from '../../../src/media/logo512.png';
 import styles from './navbar.module.css';
 
 
-
+/**
+ * Navbar has logutFunc and ShowContacts function that show contacts Component on click
+ */
 const Navbar = (props) => {
     const store = useContext(ThemeContext);
+    const history = useHistory();
+
 
     const logoutFunc = () => {
         store.user.set(false)
+    }
+
+    const showContacts = () => {
+        history.push("/contacts")
     }
 
 
@@ -24,6 +33,9 @@ const Navbar = (props) => {
                         <span></span>
                         <span></span>
                         {<ul id="menu">
+                            <li onClick={showContacts}>
+                                <Link to="/contacts">Contacts</Link>
+                            </li>
                             <li>
                                 <Link to="/settings">Setting</Link>
                             </li>
@@ -34,7 +46,7 @@ const Navbar = (props) => {
                     </div>
                 </nav></div>
                 <div>
-                    <img src={logo} className={styles.logo} />
+                    <img src={logo} className={styles.logo} alt="Logo" />
                 </div>
                 <ul>
                     <li>
@@ -46,7 +58,7 @@ const Navbar = (props) => {
                 </ul>
             </nav>
             <div>
-                <img src={localStorage.profilePicture} width="70px" height="70px" className={styles.profilePicture} />
+                <img src={localStorage.profilePicture} width="70px" height="70px" className={styles.profilePicture} alt="Profile" />
             </div>
         </div>
     );

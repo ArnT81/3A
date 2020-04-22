@@ -1,21 +1,26 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { ThemeContext } from '../themeContext/ThemeContext';
 import styles from './login.module.css';
-import { firebase, db, auth } from '../../firebase'
+import { db } from '../../firebase'
 import { Link } from 'react-router-dom'
 import RegistertUser from '../registerUser/RegisterUser'
 import { useForm } from 'react-hook-form'
 
-
+/**
+ * Login function component takes data from firebase with useEffect hook, 
+ * loginUser matches login inputs with firebase data and logins when matches or shows error in 3 seconds when wrong.
+ * Simple validating with useForm.
+ */
 const LoginComponent = () => {
   const store = useContext(ThemeContext);
-  const { register, errors, handleSubmit } = useForm()
-  const [adnan, setAdnan] = useState([]);
+  const { register, handleSubmit } = useForm()
+  const [loginAuth, setLoginAuth] = useState([]);
   const [wrongUser, setWrongUser] = useState(false);
 
   const loginUser = (data) => {
 
-    adnan.find(user => {
+    // eslint-disable-next-line array-callback-return
+    loginAuth.find((user) => {
       if (user.username === data.username && user.password === data.password) {
         store.user.set(true);
       }
@@ -37,7 +42,7 @@ const LoginComponent = () => {
           const data = doc.data()
           users.push(data)
         })
-        setAdnan(users)
+        setLoginAuth(users)
       })
       .catch(error => console.log(error))
   }, []);
@@ -49,7 +54,7 @@ const LoginComponent = () => {
         <form name="form" onSubmit={handleSubmit(loginUser)}>
           <div>
             <label>Email address:</label>
-            <input ref={register({ required: true, minLength: 6 })} name="username" type="text" aria-describedby="emailHelp" placeholder="Enter User Name" />
+            <input ref={register({ required: true })} name="username" type="text" aria-describedby="emailHelp" placeholder="Enter User Name" />
           </div>
           <div>
             <label>Password:</label>

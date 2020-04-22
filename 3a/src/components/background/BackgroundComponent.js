@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
+
 import { ThemeContext } from '../themeContext/ThemeContext';
 import styles from '../background/background.module.css';
 import Wrapper from '../wrapper/Wrapper'
-
 import image1 from '../../media/oceandawn.jpg';
 import image2 from '../../media/snowymountain.jpg';
 import image3 from '../../media/balconies.jpg';
@@ -29,9 +29,9 @@ const BackgroundComponent = () => {
         <Wrapper>
             <div className={styles.backgroundComponent}>
                 <h3>Pictures</h3>
-                <img src={image1} width="160px" onClick={handleBackground1}></img>
-                <img src={image2} width="160px" onClick={handleBackground2}></img>
-                <img src={image3} width="160px" onClick={handleBackground3}></img>
+                <img src={image1} width="160px" onClick={handleBackground1} alt="Background"></img>
+                <img src={image2} width="160px" onClick={handleBackground2} alt="Background"></img>
+                <img src={image3} width="160px" onClick={handleBackground3} alt="Background"></img>
             </div>
         </Wrapper>
     )

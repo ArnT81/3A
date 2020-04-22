@@ -2,15 +2,13 @@
 //and this will send message you type in
 import React, { useState } from "react";
 import styles from '../MessageBox/messageBox.module.css'
-
 const MessageBox = ({ onSendMessage: pushSendMessage, }) => {
   const [message, setMessage] = useState("");
 
   return (
     <input
+      placeholder="Start writing..."
       className={styles.messageBox}
-      label="Start chat"
-      multiline
       onChange={evt => setMessage(evt.target.value)}
       onKeyDown={evt => {
         if (evt.key === "Enter") {
@@ -19,7 +17,6 @@ const MessageBox = ({ onSendMessage: pushSendMessage, }) => {
           setMessage('');
         }
       }}
-      rows="4"
       value={message}
     />
   );

@@ -38,7 +38,8 @@ const App = () => {
       {<img src={store.background.get} alt="ocean at dawn" />}
       <div className="container">
         <Router>
-          {user ? <> <Navbar />
+          {user ? <>
+            <Navbar />
             <Sidebar>
               <Contacts />
             </Sidebar> </> : null}
@@ -50,9 +51,10 @@ const App = () => {
                 <Route path="/register" render={props => <RegisterUser {...props} />} />
               </> :
               <Main>
+                <Route path="/contacts" render={props => <Contacts {...props} />} />
                 <Route path="/background" render={props => <BackgroundComponent {...props} />} />
                 <Route path="/settings" render={props => <Settings {...props} />} />
-                <Route path="/settings/background" render={props => <BackgroundComponent></BackgroundComponent>} />
+                <Route path="/settings/background" render={props => <BackgroundComponent />} />
                 <Route path="/message" render={props => <Message {...props} />} />
               </Main>
             }
