@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { db } from '../../firebase'
-import styles from './contacts.module.css'
 import { useHistory } from 'react-router-dom'
-
-
+import styles from './contacts.module.css'
 
 /**
  * Contacts function component with useEffect hook takes the users from firebase.
@@ -18,7 +16,6 @@ const Contacts = (props) => {
     const [searchResults, setSearchResults] = useState([]);
     let filteredContact = Object.keys(contacts).map((key) => contacts[key]);
     const history = useHistory()
-
 
     const handleChange = event => {
         setSearchTerm(event.target.value);
@@ -47,14 +44,12 @@ const Contacts = (props) => {
             contact.toLowerCase().includes(searchTerm.toLowerCase())
         );
         setSearchResults(results);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [searchTerm]);
 
 
     const startMsg = () => {
         history.push('/message')
     }
-
 
     return (
         <div className={styles.contacts}>

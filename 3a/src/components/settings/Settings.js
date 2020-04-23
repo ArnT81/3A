@@ -2,9 +2,15 @@ import React, { useContext } from 'react';
 import { ThemeContext } from '../themeContext/ThemeContext';
 import Wrapper from '../wrapper/Wrapper';
 import InputColor from 'react-input-color';
-import styles from './settings.module.css';
 import { Link } from 'react-router-dom'
+import styles from './settings.module.css';
 
+/**
+ * Contains logic and input type file to change profilepicture.
+ * Contains logic and input type color to change color of theme.
+ * Contains logic connected to buttons for adjustment of font-size in app.
+ * Link to component where you change background
+ */
 
 const Settings = () => {
   const store = useContext(ThemeContext);
@@ -81,8 +87,6 @@ const Settings = () => {
       </div>
     </Wrapper>
   );
-
 }
-
 
 export default Settings;

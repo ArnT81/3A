@@ -1,6 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import socketIOClient from "socket.io-client";
 
+/**
+ * And here is backend for the chat server
+ */
+
 const useChat = () => {
   const [messages, setMessages] = useState([]);
   const socketRef = useRef();
@@ -10,7 +14,6 @@ const useChat = () => {
       "http://localhost:5000"
     );
 
-    //and here is backend for the chat server
     socketRef.current.on(
       "newChatMessage",
       ({ message }) => {

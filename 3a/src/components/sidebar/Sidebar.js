@@ -1,6 +1,10 @@
 import React, { useContext } from 'react';
-import styles from './sidebar.module.css'
 import { ThemeContext } from '../themeContext/ThemeContext';
+import styles from './sidebar.module.css';
+
+/**
+ * Graphical component that contains contacts (added encapsuled in App.js)
+ */
 
 const Sidebar = (props) => {
     const store = useContext(ThemeContext)

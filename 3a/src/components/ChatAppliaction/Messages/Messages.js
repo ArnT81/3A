@@ -6,9 +6,9 @@ import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import ListItemText from "@material-ui/core/ListItemText";
 import React, { useContext } from "react";
 import { ThemeContext } from "../../themeContext/ThemeContext";
+
 /**
- * 
- * and here you have the styling in the messages that you send 
+ * And here you have the styling in the messages that you send 
  */
 
 const Messages = ({ messages }) => {

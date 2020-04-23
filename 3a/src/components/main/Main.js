@@ -1,6 +1,11 @@
 import React, { useContext } from 'react';
-import styles from './main.module.css'
 import { ThemeContext } from '../themeContext/ThemeContext';
+import styles from './main.module.css'
+
+/**
+ * Main-content window that contain the componenents that opens in the 
+ * app and effects their position.
+ */
 
 const Main = (props) => {
     const store = useContext(ThemeContext)

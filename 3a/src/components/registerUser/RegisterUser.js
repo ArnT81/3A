@@ -2,14 +2,15 @@ import React, { useContext } from 'react';
 import { ThemeContext } from '../themeContext/ThemeContext'
 import { db } from '../../firebase'
 import { Link } from 'react-router-dom'
-import styles from './registerUser.module.css'
 import { useForm } from 'react-hook-form'
+import styles from './registerUser.module.css'
 
 /**
  * RegisterUser Component is a function component that adds new user to firebase database when submitting.
  * And logins after submitting.
  * Validating with useForm
  */
+
 const RegistertUser = (props) => {
     const store = useContext(ThemeContext);
     const { register, errors, handleSubmit } = useForm()

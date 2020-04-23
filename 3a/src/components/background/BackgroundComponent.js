@@ -1,11 +1,16 @@
 import React, { useContext } from 'react';
-
 import { ThemeContext } from '../themeContext/ThemeContext';
-import styles from '../background/background.module.css';
 import Wrapper from '../wrapper/Wrapper'
 import image1 from '../../media/oceandawn.jpg';
 import image2 from '../../media/snowymountain.jpg';
 import image3 from '../../media/balconies.jpg';
+import styles from '../background/background.module.css';
+
+/**
+ * Imports and provides the pictures used as backgrounds and 
+ * contains the logic for changing background.
+ * displays smaller versions of the pictures for selection
+ */
 
 const BackgroundComponent = () => {
     const store = useContext(ThemeContext)

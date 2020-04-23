@@ -5,14 +5,15 @@ import { Link } from 'react-router-dom';
 import logo from '../../../src/media/logo512.png';
 import styles from './navbar.module.css';
 
-
 /**
- * Navbar has logutFunc and ShowContacts function that show contacts Component on click
+ * Navbar is the component on the top of the app (above main content window and sidebar).
+ * Contains the logo, links to logut and contacts, and displays the profilepicture.
+ * There is also a "hamburger-menu" visible only in mobile display format.
  */
+
 const Navbar = (props) => {
     const store = useContext(ThemeContext);
     const history = useHistory();
-
 
     const logoutFunc = () => {
         store.user.set(false)
@@ -21,7 +22,6 @@ const Navbar = (props) => {
     const showContacts = () => {
         history.push("/contacts")
     }
-
 
     return (
         <div className={styles.navbar} style={{ background: store.theme.get, color: store.color.get }}>

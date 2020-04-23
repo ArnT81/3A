@@ -17,6 +17,7 @@ import BackgroundComponent from './components/background/BackgroundComponent';
  * Store object contains the states for easier use.
  * Contains the router function.
  */
+
 const App = () => {
   const [user, setUser] = useState(false);
   const [profilePicture, setProfilePicture] = useState(localStorage.profilePicture);
@@ -25,7 +26,6 @@ const App = () => {
   const [background, setBackground] = useState(image1)
   const [color, setColor] = useState('white');
   const [fontSize, setFontSize] = useState('medium');
-
 
   const store = {
     user: { get: user, set: setUser },
@@ -62,7 +62,6 @@ const App = () => {
                 <Route path="/message" render={props => <Message {...props} />} />
               </Main>
             }
-
           </Switch>
         </Router>
       </div>

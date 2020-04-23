@@ -1,16 +1,17 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { ThemeContext } from '../themeContext/ThemeContext';
-import styles from './login.module.css';
 import { db } from '../../firebase'
 import { Link } from 'react-router-dom'
 import RegistertUser from '../registerUser/RegisterUser'
 import { useForm } from 'react-hook-form'
+import styles from './login.module.css';
 
 /**
  * Login function component takes data from firebase with useEffect hook, 
  * loginUser matches login inputs with firebase data and logins when matches or shows error in 3 seconds when wrong.
  * Simple validating with useForm.
  */
+
 const LoginComponent = () => {
   const store = useContext(ThemeContext);
   const { register, handleSubmit } = useForm()
@@ -18,8 +19,6 @@ const LoginComponent = () => {
   const [wrongUser, setWrongUser] = useState(false);
 
   const loginUser = (data) => {
-
-    // eslint-disable-next-line array-callback-return
     loginAuth.find((user) => {
       if (user.username === data.username && user.password === data.password) {
         store.user.set(true);
