@@ -12,7 +12,11 @@ import Message from './components/ChatAppliaction/Chat'
 import image1 from './media/oceandawn.jpg';
 import BackgroundComponent from './components/background/BackgroundComponent';
 
-
+/**
+ * Global state is created here, that we use in other components with useContext.
+ * Store object contains the states for easier use.
+ * Contains the router function.
+ */
 const App = () => {
   const [user, setUser] = useState(false);
   const [profilePicture, setProfilePicture] = useState(localStorage.profilePicture);

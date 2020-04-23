@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import styles from './wrapper.module.css'
 
+
+
 class Wrapper extends Component {
 
-    constructor(props) {
-        super(props)
-        this.state = {}
-    }
 
     render() {
         return (
