@@ -1,3 +1,6 @@
+/**
+ * and here is backend for the chat server
+ */
 import { useEffect, useRef, useState } from "react";
 import socketIOClient from "socket.io-client";
 
@@ -10,7 +13,6 @@ const useChat = () => {
       "http://localhost:5000"
     );
 
-    //and here is backend for the chat server
     socketRef.current.on(
       "newChatMessage",
       ({ message }) => {
