@@ -1,3 +1,5 @@
+//this is component that handle the view of the message after entering (Enter button)
+//and this will send message you type in
 import React, { useState } from "react";
 import styles from '../MessageBox/messageBox.module.css'
 const MessageBox = ({ onSendMessage: pushSendMessage, }) => {
@@ -12,7 +14,7 @@ const MessageBox = ({ onSendMessage: pushSendMessage, }) => {
         if (evt.key === "Enter") {
           evt.preventDefault();
           pushSendMessage(message);
-          setMessage("");
+          setMessage('');
         }
       }}
       value={message}

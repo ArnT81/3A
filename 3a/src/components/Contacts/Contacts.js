@@ -43,7 +43,11 @@ const Contacts = (props) => {
     }, []);
 
     useEffect(() => {
+<<<<<<< HEAD
+        const results = people.filter(contact =>
+=======
         const results = allUserNames.filter(contact =>
+>>>>>>> 3ca69913ab701c1db78e0a67b299697b620d00aa
             contact.toLowerCase().includes(searchTerm.toLowerCase())
         );
         setSearchResults(results);

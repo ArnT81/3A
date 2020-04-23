@@ -6,7 +6,10 @@ import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import ListItemText from "@material-ui/core/ListItemText";
 import React, { useContext } from "react";
 import { ThemeContext } from "../../themeContext/ThemeContext";
-
+/**
+ * 
+ * and here you have the styling in the messages that you send 
+ */
 
 const Messages = ({ messages }) => {
   const store = useContext(ThemeContext);
@@ -17,7 +20,7 @@ const Messages = ({ messages }) => {
         <ListItem alignItems="flex-start" key={index}>
           <ListItemAvatar>
             <Avatar
-              alt="Cute Kitten"
+              alt="profile picture"
               src={store.profilePicture.get}
             />
           </ListItemAvatar>
